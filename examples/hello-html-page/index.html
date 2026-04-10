@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello from Padang!</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #e0e0e0;
+            padding: 2rem;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 600px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #a78bfa; }
+        .subtitle { font-size: 1.1rem; color: #94a3b8; margin-bottom: 2rem; }
+        .badge {
+            display: inline-block;
+            background: #7c3aed;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+        p { line-height: 1.7; margin-bottom: 1rem; }
+        .tools { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem; }
+        .tool-tag {
+            background: rgba(167,139,250,0.15);
+            border: 1px solid rgba(167,139,250,0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+        }
+        .footer { margin-top: 2rem; font-size: 0.8rem; color: #64748b; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">🤖 Made with AI Assistance</div>
+        <h1>Hello, Padang! 👋</h1>
+        <p class="subtitle">A simple page built at the AI Coding Tools Class</p>
+        <p>Selamat datang! This page was created using <strong>HTML, CSS</strong>, and with help from <strong>Claude AI</strong>. You can use it as a starting point for your own projects.</p>
+        <p>Edit this file in VS Code, commit to GitHub, and deploy with GitHub Pages — all in under 10 minutes!</p>
+        <div class="tools">
+            <span class="tool-tag">VS Code</span>
+            <span class="tool-tag">Claude.ai</span>
+            <span class="tool-tag">GitHub</span>
+            <span class="tool-tag">GitHub Pages</span>
+        </div>
+        <div class="footer">
+            Padang AI Coding Tools Class · Telkom AI Space / IndigoSpace Padang
+        </div>
+    </div>
+</body>
+</html>
