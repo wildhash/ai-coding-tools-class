@@ -25,7 +25,6 @@ __pycache__/
 .eggs/
 venv/
 env/
-.env
 
 # Secrets - NEVER commit these
 .env
