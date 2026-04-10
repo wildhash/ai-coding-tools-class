@@ -36,12 +36,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Step 3: Upload only the /site directory as the Pages artifact
+      # Step 3: Upload the root directory as the Pages artifact
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the /site directory — this is where all HTML/CSS/JS lives
-          path: './site'
+          # Upload from root — all HTML/CSS/JS lives here
+          path: '.'
 
       # Step 4: Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages

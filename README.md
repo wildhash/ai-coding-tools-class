@@ -3,7 +3,7 @@
 > **(EN/ID) Hands-on workshop for modern AI/ML coding tools**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://padangaiclass.github.io/ai-coding-tools-class/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://wildhash.github.io/ai-coding-tools-class/)
 
 A practical, bilingual (English / Bahasa Indonesia) workshop held at **Telkom AI Space / IndigoSpace Padang, Indonesia**. Participants learn to use modern AI-assisted coding tools — from writing their first prompt to shipping a live website. No prior AI experience required; a basic understanding of HTML/CSS is helpful but not mandatory.
 
@@ -90,7 +90,7 @@ Think → Prompt → Build → Review → Commit → Publish
 
 ```bash
 # 1. Clone the workshop repository
-git clone https://github.com/padangaiclass/ai-coding-tools-class.git
+git clone https://github.com/wildhash/ai-coding-tools-class.git
 
 # 2. Open in VS Code
 code ai-coding-tools-class
@@ -149,7 +149,7 @@ We take responsible AI use seriously. In this workshop:
 
 ## 🔗 Workshop Site (GitHub Pages)
 
-👉 **[https://padangaiclass.github.io/ai-coding-tools-class/](https://padangaiclass.github.io/ai-coding-tools-class/)**
+👉 **[https://wildhash.github.io/ai-coding-tools-class/](https://wildhash.github.io/ai-coding-tools-class/)**
 
 The live site includes interactive tool cards, bilingual content toggle, and the full workshop schedule.
 
