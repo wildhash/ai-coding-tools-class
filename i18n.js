@@ -32,10 +32,16 @@
       if (dict[key] !== undefined) el.placeholder = dict[key];
     });
 
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+    });
+
     document.documentElement.lang = lang === 'id' ? 'id' : 'en';
 
     document.querySelectorAll('.lang-toggle').forEach(function(btn) {
       btn.textContent = lang === 'id' ? '🇮🇩 ID | 🇬🇧 EN' : '🇬🇧 EN | 🇮🇩 ID';
+      btn.setAttribute('aria-pressed', lang === 'id' ? 'true' : 'false');
     });
 
     currentLang = lang;
