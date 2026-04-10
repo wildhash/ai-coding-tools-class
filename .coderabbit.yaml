@@ -1,0 +1,29 @@
+language: "en-US"
+
+reviews:
+  profile: "assertive"
+  high_level_summary: true
+  poem: false
+  request_changes_workflow: true
+
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - "main"
+      - "develop"
+
+path_filters:
+  ignore:
+    - "**/*.min.js"
+    - "**/*.min.css"
+    - "node_modules/**"
+    - "dist/**"
+    - ".github/**"
+
+instructions:
+  - "This is a student workshop project at IndigoSpace Padang, Indonesia."
+  - "Focus on teaching moments — explain why something is wrong, not just that it is."
+  - "Flag any hardcoded credentials or API keys as Critical priority."
+  - "Check for missing input validation on all user-facing inputs."
+  - "Explain security findings in plain language suitable for beginners."

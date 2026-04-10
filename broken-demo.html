@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+  broken-demo.html — Padang AI Coding Tools Class
+  
+  This file has THREE INTENTIONAL SECURITY ISSUES for the CodeRabbit demo.
+  Do NOT use this code in any real project.
+  
+  Issues:
+  1. Line ~25: Hardcoded fake API key
+  2. Line ~38: SQL injection via string concatenation
+  3. Line ~45: Plaintext password comparison
+  
+  Open a PR with this file and watch CodeRabbit catch all three.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Demo (Intentionally Broken)</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <input type="text"     id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    // ❌ ISSUE 1: Hardcoded API key — should be in an environment variable
+    const API_KEY = "sk-abc123fakekeyfordemopurposes456";
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // ❌ ISSUE 2: SQL injection — user input concatenated directly into query
+      const query = "SELECT * FROM users WHERE username = '" + username + "'";
+      console.log("Running query:", query);
+
+      // Simulated user object from database
+      const user = { username: "admin", password: "password123" };
+
+      // ❌ ISSUE 3: Plaintext password comparison — should use bcrypt
+      if (user.password === password) {
+        console.log("Login successful");
+      } else {
+        console.log("Login failed");
+      }
+    });
+  </script>
+</body>
+</html>

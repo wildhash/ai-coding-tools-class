@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Deep Dive — Padang AI Coding Tools Class</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container flex items-center justify-between" style="height:100%">
+    <a href="index.html" class="nav-logo">🤖 Padang AI Class</a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html"            data-i18n="nav.home">Home</a></li>
+      <li><a href="tools.html"            data-i18n="nav.tools">Tools</a></li>
+      <li><a href="claude-deep-dive.html" data-i18n="nav.claude">Claude</a></li>
+      <li><a href="security.html"         data-i18n="nav.security">Security</a></li>
+      <li><a href="free-tools.html"       data-i18n="nav.free">Free Tools</a></li>
+      <li><a href="resources.html"        data-i18n="nav.resources">Resources</a></li>
+      <li><a href="setup.html"            data-i18n="nav.setup">Setup</a></li>
+      <li><a href="projects.html"         data-i18n="nav.projects">Projects</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧 EN | 🇮🇩 ID</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<div class="page-header">
+  <div class="container">
+    <h1 data-i18n="claude.title">Claude Deep Dive</h1>
+    <p data-i18n="claude.sub">Web → Desktop → Code → Dispatch: the full Claude toolkit</p>
+  </div>
+</div>
+
+<!-- Progression diagram -->
+<div class="container" style="margin-top:1.5rem; margin-bottom:2rem;">
+  <div class="workflow-arc">
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-badge">🌐 Web</div>
+        <div class="workflow-desc">Browser — no install</div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-badge">💻 Desktop</div>
+        <div class="workflow-desc">Native app + MCP</div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-badge">⌨️ Code</div>
+        <div class="workflow-desc">Terminal agent</div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-badge">🔀 Dispatch</div>
+        <div class="workflow-desc">Multi-tool automation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<section class="section" style="padding-top:1rem;">
+  <div class="container">
+    <div class="tabs" id="claude-tabs">
+      <div class="tab-list" role="tablist">
+        <button class="tab-btn active" data-tab="web"      role="tab" data-i18n="claude.tab.web">Claude Web</button>
+        <button class="tab-btn"        data-tab="desktop"  role="tab" data-i18n="claude.tab.desktop">Desktop + MCP</button>
+        <button class="tab-btn"        data-tab="code"     role="tab" data-i18n="claude.tab.code">Claude Code</button>
+        <button class="tab-btn"        data-tab="dispatch" role="tab" data-i18n="claude.tab.dispatch">MCP Dispatch</button>
+      </div>
+
+      <!-- ── Tab: Web ──────────────────────────────────────── -->
+      <div class="tab-content active" data-tab-content="web">
+        <div class="grid grid-2 gap-6" style="margin-bottom:1.5rem;">
+          <div>
+            <h2 data-i18n="claude.web.h">Claude Web — Start Here</h2>
+            <p class="text-muted mt-2" data-i18n="claude.web.p">The fastest way to use Claude. No install. 200k context window. Free tier with generous daily limits.</p>
+            <div class="flex gap-3 mt-4 flex-wrap">
+              <a href="https://claude.ai" target="_blank" class="btn btn-primary">Open Claude.ai →</a>
+              <a href="https://docs.anthropic.com" target="_blank" class="btn btn-secondary">Docs</a>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Feature</th><th>Free</th><th>Pro $20/mo</th></tr></thead>
+              <tbody>
+                <tr><td>Claude Sonnet</td><td>~30/day</td><td>Unlimited</td></tr>
+                <tr><td>Claude Haiku</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Context window</td><td>200k tokens</td><td>200k tokens</td></tr>
+                <tr><td>Projects</td><td>Limited</td><td>✅ Full</td></tr>
+                <tr><td>Artifacts</td><td>✅</td><td>✅</td></tr>
+                <tr><td>File uploads</td><td>✅</td><td>✅</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-3 gap-4 mb-6">
+          <div class="card">
+            <h3>🗂️ Projects</h3>
+            <p class="text-muted text-sm mt-2">Persistent AI workspaces with custom instructions. Add your tech stack, coding style, and project files once — Claude remembers across all conversations in the project.</p>
+          </div>
+          <div class="card">
+            <h3>🎨 Artifacts</h3>
+            <p class="text-muted text-sm mt-2">Claude renders live code in a side panel — HTML pages, React components, SVG diagrams. Edit and iterate without copy-pasting. Try: "Build an interactive quiz in React."</p>
+          </div>
+          <div class="card">
+            <h3>🧠 Extended Thinking</h3>
+            <p class="text-muted text-sm mt-2">Claude shows its reasoning chain before answering. Use for hard algorithms, architecture decisions, and complex debugging where normal mode gives mediocre results.</p>
+          </div>
+        </div>
+
+        <h3 class="mb-4">5 Starter Prompts for Students</h3>
+        <div style="display:flex; flex-direction:column; gap:.75rem;">
+          <div class="card">
+            <strong>Code Review</strong>
+            <pre><code>Review this Python function for security vulnerabilities.
+For each issue: name it, explain the risk, show the fix.
+[paste your code]</code></pre>
+          </div>
+          <div class="card">
+            <strong>Explain Code</strong>
+            <pre><code>Explain this JavaScript function line-by-line for a beginner.
+Then suggest 2 improvements.
+[paste your code]</code></pre>
+          </div>
+          <div class="card">
+            <strong>Debug</strong>
+            <pre><code>My Python code throws: [paste exact error]
+Relevant code: [paste]
+Expected: [what should happen]
+Actual: [what happens instead]
+Find the root cause and fix it.</code></pre>
+          </div>
+          <div class="card">
+            <strong>Build a Feature</strong>
+            <pre><code>I'm building a [Django / Flask / Express] app.
+Stack: [your stack]
+Add: [feature description]
+Requirements: [list them]
+Return the complete updated file.</code></pre>
+          </div>
+          <div class="card">
+            <strong>Learn a Concept</strong>
+            <pre><code>Explain [concept] to an Indonesian university student
+who knows basic Python but no web frameworks.
+Use a real-world analogy, then show code.</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Tab: Desktop ──────────────────────────────────── -->
+      <div class="tab-content" data-tab-content="desktop" id="desktop">
+        <h2 data-i18n="claude.desktop.h">Claude Desktop — Local Power</h2>
+        <p class="text-muted mt-2 mb-6" data-i18n="claude.desktop.p">A native app that gives Claude access to your local files, GitHub, and tools via MCP servers.</p>
+
+        <div class="grid grid-2 gap-6 mb-6">
+          <div>
+            <h3>Install Claude Desktop</h3>
+            <div class="callout callout-info mt-3">
+              <div class="callout-icon">🔗</div>
+              <div>
+                <div class="callout-title">Download</div>
+                <p class="callout-body"><a href="https://claude.ai/download" target="_blank">claude.ai/download</a> — Windows &amp; Mac</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mt-3">After installing, sign in with your Anthropic account. The MCP configuration file is at:</p>
+            <pre><code># Mac
+~/Library/Application Support/Claude/claude_desktop_config.json
+
+# Windows
+%APPDATA%\Claude\claude_desktop_config.json</code></pre>
+          </div>
+          <div>
+            <h3>What is MCP?</h3>
+            <p class="text-muted text-sm mt-2">Model Context Protocol is an open standard that lets Claude connect to external tools. Think of it as a universal adapter that gives Claude real access to your computer.</p>
+            <div class="security-flow mt-3" style="max-width:100%;">
+              <div class="flow-step step-info" style="padding:.75rem 1rem;">
+                <div class="flow-step-icon">🗂️</div>
+                <div class="flow-step-content">
+                  <h4>Filesystem MCP</h4>
+                  <p>Read/write local files directly</p>
+                </div>
+              </div>
+              <div class="flow-connector">↓</div>
+              <div class="flow-step step-info" style="padding:.75rem 1rem;">
+                <div class="flow-step-icon">🐙</div>
+                <div class="flow-step-content">
+                  <h4>GitHub MCP</h4>
+                  <p>Issues, PRs, commits via API</p>
+                </div>
+              </div>
+              <div class="flow-connector">↓</div>
+              <div class="flow-step step-info" style="padding:.75rem 1rem;">
+                <div class="flow-step-icon">🌐</div>
+                <div class="flow-step-content">
+                  <h4>Browser MCP</h4>
+                  <p>Navigate, screenshot, extract</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mb-3">Connect the Filesystem MCP</h3>
+        <pre data-lang="bash"><code>npm install -g @modelcontextprotocol/server-filesystem</code></pre>
+        <pre data-lang="json"><code>// claude_desktop_config.json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/yourname/projects"
+      ]
+    }
+  }
+}</code></pre>
+
+        <h3 class="mb-3 mt-6">5-Step Demo: Filesystem MCP</h3>
+        <div class="security-flow" style="max-width:100%;">
+          <div class="flow-step">
+            <div class="flow-step-icon">1</div>
+            <div class="flow-step-content">
+              <h4>Explore</h4>
+              <p>"List all files in my project and summarize what this app does based on the structure."</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step">
+            <div class="flow-step-icon">2</div>
+            <div class="flow-step-content">
+              <h4>Read</h4>
+              <p>"Read main.py and identify functions longer than 30 lines."</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step">
+            <div class="flow-step-icon">3</div>
+            <div class="flow-step-content">
+              <h4>Audit</h4>
+              <p>"Search all Python files for hardcoded passwords or API keys."</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step step-warning">
+            <div class="flow-step-icon">4</div>
+            <div class="flow-step-content">
+              <h4>Fix</h4>
+              <p>"In config.py, move the hardcoded DB password to an environment variable called DB_PASSWORD."</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step step-success">
+            <div class="flow-step-icon">5</div>
+            <div class="flow-step-content">
+              <h4>Document</h4>
+              <p>"Generate a complete DEVELOPER.md documenting project structure, setup, and API endpoints."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Tab: Claude Code ──────────────────────────────── -->
+      <div class="tab-content" data-tab-content="code" id="code">
+        <h2 data-i18n="claude.code.h">Claude Code — Terminal Agent</h2>
+        <p class="text-muted mt-2 mb-6" data-i18n="claude.code.p">An autonomous coding agent that lives in your terminal, reads your entire codebase, and makes changes directly.</p>
+
+        <div class="callout callout-warning mb-6">
+          <div class="callout-icon">⚠️</div>
+          <div>
+            <div class="callout-title" data-i18n="claude.security.note">Always review every AI-generated change before committing to Git</div>
+            <p class="callout-body">Run <code>git diff</code> before every <code>git add</code>. You are responsible for the code in your repo.</p>
+          </div>
+        </div>
+
+        <h3 data-i18n="claude.install.title">Install Claude Code</h3>
+        <pre data-lang="bash"><code># Requires Node.js 18+
+npm install -g @anthropic-ai/claude-code
+
+# Verify
+claude --version
+
+# Authenticate
+claude auth login
+
+# Run in any project
+cd ~/projects/my-app && claude</code></pre>
+
+        <h3 class="mt-6 mb-3" data-i18n="claude.cmd.ref">Slash Command Reference</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Command</th><th>What It Does</th><th>Example Usage</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>/init</code></td><td>Analyse project, create CLAUDE.md context file</td><td>Run first in every new project</td></tr>
+              <tr><td><code>/help</code></td><td>Show all available slash commands</td><td>When you forget a command</td></tr>
+              <tr><td><code>/status</code></td><td>Show context size and loaded files</td><td>Check before long sessions</td></tr>
+              <tr><td><code>/review</code></td><td>Review recent changes or full project</td><td><code>/review "focus on security"</code></td></tr>
+              <tr><td><code>/compact</code></td><td>Compress conversation to free context space</td><td>On long sessions &gt;1hr</td></tr>
+              <tr><td><code>/clear</code></td><td>Clear session and start fresh</td><td>Switching to a new task</td></tr>
+              <tr><td><code>/add &lt;file&gt;</code></td><td>Add a specific file to context</td><td><code>/add src/auth.py</code></td></tr>
+              <tr><td><code>/diff</code></td><td>Show all changes made this session</td><td>Before committing</td></tr>
+              <tr><td><code>/undo</code></td><td>Undo the last file change</td><td>When a change was wrong</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="mt-6 mb-3">10-Step Demo Session</h3>
+        <pre data-lang="bash"><code>mkdir demo-todo && cd demo-todo
+git init
+echo '{"name":"demo"}' > package.json
+npm install express --save
+claude</code></pre>
+        <div class="security-flow mt-3" style="max-width:100%;">
+          <div class="flow-step"><div class="flow-step-icon">1</div><div class="flow-step-content"><p><code>/init</code> — Claude explores your project</p></div></div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step"><div class="flow-step-icon">2</div><div class="flow-step-content"><p>"Create a simple Express REST API for a to-do list with in-memory storage."</p></div></div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step"><div class="flow-step-icon">3</div><div class="flow-step-content"><p><code>/review "check API design"</code></p></div></div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step"><div class="flow-step-icon">4</div><div class="flow-step-content"><p>"Add input validation — todos need a non-empty title."</p></div></div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step step-warning"><div class="flow-step-icon">5</div><div class="flow-step-content"><p><code>git diff</code> — review every change before committing</p></div></div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step step-success"><div class="flow-step-icon">6</div><div class="flow-step-content"><p>"Write Jest tests for all endpoints." → <code>/compact</code> → "Create README.md"</p></div></div>
+        </div>
+
+        <h3 class="mt-6 mb-3">Claude Code vs Cursor vs Copilot</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Feature</th><th>Claude Code</th><th>Cursor</th><th>GitHub Copilot</th></tr></thead>
+            <tbody>
+              <tr><td>Interface</td><td>Terminal</td><td>IDE</td><td>VS Code Extension</td></tr>
+              <tr><td>Full codebase context</td><td>✅</td><td>✅</td><td>⚠️ Open files</td></tr>
+              <tr><td>Runs terminal commands</td><td>✅</td><td>⚠️ Agent mode</td><td>❌</td></tr>
+              <tr><td>Inline completions</td><td>❌</td><td>✅</td><td>✅</td></tr>
+              <tr><td>Free tier</td><td>API credits</td><td>2000/month</td><td>Free for students</td></tr>
+              <tr><td>Best for</td><td>Complex automation</td><td>Daily coding</td><td>Real-time completions</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── Tab: Dispatch ─────────────────────────────────── -->
+      <div class="tab-content" data-tab-content="dispatch">
+        <h2 data-i18n="claude.dispatch.h">MCP Dispatch — Full Automation</h2>
+        <p class="text-muted mt-2 mb-6" data-i18n="claude.dispatch.p">Route tasks across multiple MCP servers — filesystem, GitHub, browser — in a single natural language instruction.</p>
+
+        <div class="callout callout-info mb-6">
+          <div class="callout-icon">💡</div>
+          <div>
+            <div class="callout-title">What "Dispatch" Means</div>
+            <p class="callout-body">When you give Claude a natural language instruction, it decides which MCP server(s) to call, executes them in sequence, and integrates the results — all invisibly to you.</p>
+          </div>
+        </div>
+
+        <h3 class="mb-3">Available MCP Servers</h3>
+        <div class="grid grid-2 gap-4 mb-6">
+          <div class="card">
+            <h4>🗂️ Filesystem</h4>
+            <pre><code>npm install -g @modelcontextprotocol/server-filesystem</code></pre>
+            <p class="text-muted text-sm mt-2">Read/write files, list directories, move/copy files</p>
+          </div>
+          <div class="card">
+            <h4>🐙 GitHub</h4>
+            <pre><code>npm install -g @modelcontextprotocol/server-github</code></pre>
+            <p class="text-muted text-sm mt-2">Repos, issues, PRs, commits — requires PAT token</p>
+          </div>
+          <div class="card">
+            <h4>🌐 Browser / Puppeteer</h4>
+            <pre><code>npm install -g @modelcontextprotocol/server-puppeteer</code></pre>
+            <p class="text-muted text-sm mt-2">Navigate URLs, screenshot, extract content</p>
+          </div>
+          <div class="card">
+            <h4>💬 Slack</h4>
+            <pre><code>npm install -g @modelcontextprotocol/server-slack</code></pre>
+            <p class="text-muted text-sm mt-2">Read/send messages, list channels — requires bot token</p>
+          </div>
+        </div>
+
+        <h3 class="mb-3">Example Dispatch Workflow</h3>
+        <div class="card mb-4">
+          <strong>Single Prompt — Multi-Server Execution</strong>
+          <pre class="mt-3"><code>"Check my GitHub notifications for new PR reviews.
+For each PR, read the changed files locally.
+Write a daily standup summary and save it to
+~/daily-standup-2025-01-15.md"</code></pre>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="badge badge-accent">GitHub MCP → list PRs</span>
+            <span class="badge badge-accent">Filesystem MCP → read files</span>
+            <span class="badge badge-accent">Filesystem MCP → write summary</span>
+          </div>
+        </div>
+
+        <h3 class="mb-3">Security Rules for MCP</h3>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🔐</div>
+          <div>
+            <div class="callout-title">Least Privilege Always</div>
+            <ul style="font-size:.9rem; color:var(--text-muted); margin-top:.5rem; padding-left:1.25rem;">
+              <li>Only grant filesystem access to your <em>projects</em> folder — not <code>/</code></li>
+              <li>Use GitHub tokens with minimum required scopes</li>
+              <li>Review every file operation before confirming</li>
+              <li>Never store tokens directly in config files that get committed</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="mt-6 mb-3">Student Exercise: Two-Server Dispatch</h3>
+        <div class="card">
+          <p class="text-muted mb-3">Set up filesystem + GitHub MCP, then run this dispatch:</p>
+          <pre><code>"List all my GitHub repositories created in the last 6 months.
+For each repo that's cloned locally, check if it has a README.md.
+List the repos that are missing documentation."</code></pre>
+          <p class="text-muted text-sm mt-3">Learning goal: understand how Claude dispatches to multiple servers and integrates results.</p>
+        </div>
+      </div>
+
+    </div><!-- /.tabs -->
+  </div><!-- /.container -->
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-i18n="footer.brand">Padang AI Coding Tools Class</div>
+        <div class="footer-copy" data-i18n="footer.tagline">Telkom AI Space / IndigoSpace Padang · MIT License</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+        <li><a href="tools.html" data-i18n="footer.tools">Tools</a></li>
+        <li><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code Docs</a></li>
+      </ul>
+      <div class="footer-copy" data-i18n="footer.copy">© 2025 Padang AI Coding Tools Class.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

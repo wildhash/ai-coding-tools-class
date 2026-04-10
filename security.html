@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security &amp; Code Review — Padang AI Coding Tools Class</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container flex items-center justify-between" style="height:100%">
+    <a href="index.html" class="nav-logo">🤖 Padang AI Class</a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html"            data-i18n="nav.home">Home</a></li>
+      <li><a href="tools.html"            data-i18n="nav.tools">Tools</a></li>
+      <li><a href="claude-deep-dive.html" data-i18n="nav.claude">Claude</a></li>
+      <li><a href="security.html"         data-i18n="nav.security">Security</a></li>
+      <li><a href="free-tools.html"       data-i18n="nav.free">Free Tools</a></li>
+      <li><a href="resources.html"        data-i18n="nav.resources">Resources</a></li>
+      <li><a href="setup.html"            data-i18n="nav.setup">Setup</a></li>
+      <li><a href="projects.html"         data-i18n="nav.projects">Projects</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧 EN | 🇮🇩 ID</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<div class="page-header">
+  <div class="container">
+    <h1 data-i18n="security.title">Security &amp; Code Review</h1>
+    <p data-i18n="security.sub">Every AI-generated line deserves a second look. Here are the free tools that do it automatically.</p>
+  </div>
+</div>
+
+<!-- Never Do These -->
+<section class="section" style="padding-top:2rem; padding-bottom:1.5rem;">
+  <div class="container">
+    <div class="callout callout-danger">
+      <div class="callout-icon">🚫</div>
+      <div>
+        <div class="callout-title" data-i18n="security.never.h">Never Do These</div>
+        <ul style="font-size:.9rem; color:var(--text-muted); margin-top:.5rem; padding-left:1.25rem; display:flex; flex-direction:column; gap:.3rem;">
+          <li>Paste real API keys, passwords, or tokens into any AI chat window</li>
+          <li>Commit a <code>.env</code> file (add it to <code>.gitignore</code> <em>before</em> creating it)</li>
+          <li>Run AI-generated code without reading every line first</li>
+          <li>Accept all AI suggestions blindly — understand before you commit</li>
+          <li>Store credentials directly in config files that go into Git</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Review Workflow Diagram -->
+<section class="section" style="padding-top:1.5rem; padding-bottom:2rem;">
+  <div class="container">
+    <h2 class="mb-4" data-i18n="security.flow.title">The Review Workflow</h2>
+    <div class="security-flow">
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">⌨️</div>
+        <div class="flow-step-content">
+          <h4>Write Code</h4>
+          <p>Generate or write code with Claude, Cursor, or Copilot</p>
+        </div>
+      </div>
+      <div class="flow-connector">↓</div>
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">🤝</div>
+        <div class="flow-step-content">
+          <h4>Copilot <code>/review</code> in VS Code</h4>
+          <p>Inline security check before committing — interactive, in-editor</p>
+        </div>
+      </div>
+      <div class="flow-connector">↓</div>
+      <div class="flow-step step-warning">
+        <div class="flow-step-icon">📦</div>
+        <div class="flow-step-content">
+          <h4>Commit &amp; Open Pull Request</h4>
+          <p><code>git add -p</code> → review chunk by chunk → push → open PR</p>
+        </div>
+      </div>
+      <div class="flow-connector">↓</div>
+      <div class="flow-step step-warning">
+        <div class="flow-step-icon">🐇</div>
+        <div class="flow-step-content">
+          <h4>CodeRabbit Auto-Review</h4>
+          <p>Automatic AI review appears on the PR within ~60 seconds</p>
+        </div>
+      </div>
+      <div class="flow-connector">↓</div>
+      <div class="flow-step step-success">
+        <div class="flow-step-icon">✅</div>
+        <div class="flow-step-content">
+          <h4>Fix &amp; Merge</h4>
+          <p>Address critical findings → human review → merge to main</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CodeRabbit -->
+<section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid grid-2 gap-6">
+      <div>
+        <span class="badge badge-success mb-3">Free for public repos</span>
+        <h2 data-i18n="security.cr.h">CodeRabbit</h2>
+        <p class="text-muted mt-2" data-i18n="security.cr.p">Installs in 2 minutes. Reviews every PR automatically. Catches bugs, security issues, and bad patterns.</p>
+        <div class="flex gap-3 mt-4 flex-wrap">
+          <a href="https://coderabbit.ai" target="_blank" class="btn btn-primary">Install Free →</a>
+          <a href="https://docs.coderabbit.ai" target="_blank" class="btn btn-secondary">Docs</a>
+        </div>
+
+        <h3 class="mt-6 mb-3">Setup in 3 Steps</h3>
+        <div class="security-flow" style="max-width:100%;">
+          <div class="flow-step step-success"><div class="flow-step-icon">1</div><div class="flow-step-content"><p>Go to <a href="https://coderabbit.ai" target="_blank">coderabbit.ai</a> → "Sign in with GitHub"</p></div></div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step step-success"><div class="flow-step-icon">2</div><div class="flow-step-content"><p>Install the GitHub App on your repo</p></div></div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step step-success"><div class="flow-step-icon">3</div><div class="flow-step-content"><p>Open any PR — CodeRabbit reviews automatically ✓</p></div></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="mb-3">PR Commands</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Command</th><th>What It Does</th></tr></thead>
+            <tbody>
+              <tr><td><code>@coderabbitai review</code></td><td>Trigger a fresh full review</td></tr>
+              <tr><td><code>@coderabbitai summary</code></td><td>Plain-English PR summary</td></tr>
+              <tr><td><code>@coderabbitai explain</code></td><td>Explain a specific finding</td></tr>
+              <tr><td><code>@coderabbitai fix</code></td><td>Suggest fix for current comment</td></tr>
+              <tr><td><code>@coderabbitai resolve</code></td><td>Mark all comments resolved</td></tr>
+              <tr><td><code>@coderabbitai ignore</code></td><td>Suppress review on this PR</td></tr>
+              <tr><td><code>@coderabbitai help</code></td><td>Show all commands</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="mt-4 mb-3">Reading a Review</h3>
+        <div class="flex flex-col gap-2">
+          <div class="callout callout-danger" style="padding:.75rem 1rem;">
+            <div class="callout-icon" style="font-size:1rem;">🔴</div>
+            <div><strong>Critical</strong> — Must fix before merging</div>
+          </div>
+          <div class="callout callout-warning" style="padding:.75rem 1rem;">
+            <div class="callout-icon" style="font-size:1rem;">🟡</div>
+            <div><strong>Warning</strong> — Should fix, explains why</div>
+          </div>
+          <div class="callout callout-info" style="padding:.75rem 1rem;">
+            <div class="callout-icon" style="font-size:1rem;">💡</div>
+            <div><strong>Suggestion</strong> — Optional improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- .coderabbit.yaml -->
+    <h3 class="mt-6 mb-3">Sample <code>.coderabbit.yaml</code> for Class Repos</h3>
+    <pre data-lang="yaml"><code>language: "en-US"
+reviews:
+  profile: "assertive"
+  high_level_summary: true
+  auto_review:
+    enabled: true
+    base_branches:
+      - "main"
+path_filters:
+  ignore:
+    - "**/*.min.js"
+    - "node_modules/**"
+instructions:
+  - "This is a student project at IndigoSpace Padang, Indonesia."
+  - "Focus on teaching moments — explain why, not just what."
+  - "Flag any hardcoded credentials or API keys as critical."
+  - "Check for missing input validation on all user inputs."</code></pre>
+  </div>
+</section>
+
+<!-- Copilot Review + Macroscope -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2 gap-6">
+
+      <div>
+        <span class="badge badge-success mb-3">Free for students</span>
+        <h2 data-i18n="security.cop.h">GitHub Copilot Review</h2>
+        <p class="text-muted mt-2" data-i18n="security.cop.p">Use slash commands in VS Code to review, explain, fix, and test any code selection.</p>
+
+        <h3 class="mt-4 mb-3">Slash Commands in VS Code</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Command</th><th>What It Does</th></tr></thead>
+            <tbody>
+              <tr><td><code>/review</code></td><td>Full code review of selection</td></tr>
+              <tr><td><code>/explain</code></td><td>Explain selected code plainly</td></tr>
+              <tr><td><code>/fix</code></td><td>Suggest fix for problem code</td></tr>
+              <tr><td><code>/tests</code></td><td>Generate unit tests</td></tr>
+              <tr><td><code>/doc</code></td><td>Write documentation/comments</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="mt-4 mb-2">Security Review Prompt</h3>
+        <pre><code>/review
+Check for:
+- SQL injection vulnerabilities
+- Missing input validation
+- Hardcoded credentials
+- Authentication bypasses
+- XSS risks (innerHTML, eval)</code></pre>
+      </div>
+
+      <div>
+        <span class="badge badge-muted mb-3">Free beta</span>
+        <h2 data-i18n="security.mac.h">Macroscope</h2>
+        <p class="text-muted mt-2" data-i18n="security.mac.p">Visualize complexity, dependencies, and hotspots across your entire repository.</p>
+        <div class="flex gap-3 mt-4 flex-wrap">
+          <a href="https://macroscope.io" target="_blank" class="btn btn-primary">Open Macroscope →</a>
+        </div>
+
+        <div class="flex flex-col gap-3 mt-4">
+          <div class="card">
+            <h4>🗺️ Complexity Heatmap</h4>
+            <p class="text-muted text-sm mt-1">Color-coded view of complex files. Red = high risk, green = low.</p>
+          </div>
+          <div class="card">
+            <h4>🕸️ Dependency Graph</h4>
+            <p class="text-muted text-sm mt-1">Visualize how modules import each other. Spot circular dependencies instantly.</p>
+          </div>
+          <div class="card">
+            <h4>🔥 Change Hotspots</h4>
+            <p class="text-muted text-sm mt-1">High complexity + frequently changed = highest bug risk. Prioritize review there.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Free Tools -->
+<section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container">
+    <h2 class="mb-4" data-i18n="security.extra.title">Additional Free Security Tools</h2>
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-icon">🔍</div>
+        <div>
+          <div class="tool-name"><a href="https://semgrep.dev" target="_blank">Semgrep</a></div>
+          <div class="tool-desc">Static analysis. Runs without executing code. Hundreds of OWASP rules for Python, JS, Java &amp; more.</div>
+        </div>
+        <div class="tool-footer">
+          <span class="badge badge-success">Free OSS rules</span>
+          <a href="https://semgrep.dev" target="_blank" class="btn btn-sm btn-ghost">Install →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🛡️</div>
+        <div>
+          <div class="tool-name"><a href="https://gitguardian.com" target="_blank">GitGuardian</a></div>
+          <div class="tool-desc">Real-time monitoring for secrets accidentally pushed to GitHub. Free for public repos and developers.</div>
+        </div>
+        <div class="tool-footer">
+          <span class="badge badge-success">Free public repos</span>
+          <a href="https://gitguardian.com" target="_blank" class="btn btn-sm btn-ghost">Connect →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🔑</div>
+        <div>
+          <div class="tool-name"><a href="https://docs.github.com/en/code-security/secret-scanning" target="_blank">GitHub Secret Scanning</a></div>
+          <div class="tool-desc">Built-in. Automatic on all public repos. Detects AWS keys, GitHub tokens, Stripe keys &amp; more. Enable push protection too.</div>
+        </div>
+        <div class="tool-footer">
+          <span class="badge badge-success">Automatic &amp; free</span>
+          <a href="https://docs.github.com/en/code-security/secret-scanning" target="_blank" class="btn btn-sm btn-ghost">Enable →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🤖</div>
+        <div>
+          <div class="tool-name"><a href="https://docs.github.com/en/code-security/dependabot" target="_blank">GitHub Dependabot</a></div>
+          <div class="tool-desc">Auto-creates PRs when your dependencies have known vulnerabilities. Free on all repos. Enable in Settings → Security.</div>
+        </div>
+        <div class="tool-footer">
+          <span class="badge badge-success">Free all repos</span>
+          <a href="https://docs.github.com/en/code-security/dependabot" target="_blank" class="btn btn-sm btn-ghost">Enable →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-6">
+      <h3 class="mb-2">Run Semgrep in GitHub Actions</h3>
+      <pre data-lang="yaml"><code>name: Security Scan
+on: [push, pull_request]
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: semgrep/semgrep-action@v1
+        with:
+          config: p/security-audit</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Security Checklist -->
+<section class="section">
+  <div class="container" style="max-width:720px;">
+    <h2 class="mb-2" data-i18n="security.checklist.h">Security Checklist</h2>
+    <p class="text-muted mb-4" data-i18n="security.checklist.sub">Check off before making any repo public</p>
+
+    <div class="progress-wrap mb-2">
+      <div class="progress-bar"></div>
+    </div>
+    <div class="progress-label">
+      <span data-i18n="setup.progress.label">Progress</span>
+      <span class="progress-count">0 / 12</span>
+    </div>
+
+    <ul class="checklist mt-4">
+      <li><input type="checkbox" id="sec1"><label for="sec1"><code>.env</code> is in <code>.gitignore</code> before the first commit</label></li>
+      <li><input type="checkbox" id="sec2"><label for="sec2"><code>.env.example</code> exists with placeholder values (safe to commit)</label></li>
+      <li><input type="checkbox" id="sec3"><label for="sec3">No real API keys in any committed file — search with <code>git grep "sk-"</code></label></li>
+      <li><input type="checkbox" id="sec4"><label for="sec4">GitHub Secret Scanning is enabled on the repo</label></li>
+      <li><input type="checkbox" id="sec5"><label for="sec5">GitHub Dependabot alerts are enabled</label></li>
+      <li><input type="checkbox" id="sec6"><label for="sec6">CodeRabbit is installed and has reviewed at least one PR</label></li>
+      <li><input type="checkbox" id="sec7"><label for="sec7">All CodeRabbit Critical findings have been resolved</label></li>
+      <li><input type="checkbox" id="sec8"><label for="sec8">All user inputs are validated before use</label></li>
+      <li><input type="checkbox" id="sec9"><label for="sec9">No SQL queries built by string concatenation (<code>"SELECT * WHERE id=" + id</code>)</label></li>
+      <li><input type="checkbox" id="sec10"><label for="sec10">Passwords are hashed — never stored in plaintext</label></li>
+      <li><input type="checkbox" id="sec11"><label for="sec11">Every AI-generated file has been read line-by-line before committing</label></li>
+      <li><input type="checkbox" id="sec12"><label for="sec12"><code>npm audit</code> or <code>pip check</code> run — no critical dependency vulnerabilities</label></li>
+    </ul>
+
+    <div class="done-banner">🎉 All security checks complete — your repo is ready to go public!</div>
+  </div>
+</section>
+
+<!-- Oops I Committed a Secret -->
+<section class="section" style="background:var(--surface); border-top:1px solid var(--border);">
+  <div class="container" style="max-width:720px;">
+    <h2 class="mb-2" data-i18n="security.oops.h">Oops — I Committed a Secret</h2>
+    <p class="text-muted mb-4" data-i18n="security.oops.sub">Act fast. Bots scan GitHub in real time.</p>
+
+    <div class="security-flow">
+      <div class="flow-step step-danger">
+        <div class="flow-step-icon">1</div>
+        <div class="flow-step-content">
+          <h4>Rotate the Secret NOW</h4>
+          <p>Go to the service (AWS, GitHub, Stripe) and revoke/regenerate the key. <strong>Do this first, before anything else.</strong> Assume the old key is already compromised.</p>
+        </div>
+      </div>
+      <div class="flow-connector">↓</div>
+      <div class="flow-step step-warning">
+        <div class="flow-step-icon">2</div>
+        <div class="flow-step-content">
+          <h4>Remove from History with BFG</h4>
+          <pre style="margin:.5rem 0;"><code>brew install bfg   # Mac
+echo "YOUR_SECRET" > secrets.txt
+bfg --replace-text secrets.txt my-repo.git
+cd my-repo && git reflog expire --expire=now --all
+git gc --prune=now && git push --force --all</code></pre>
+        </div>
+      </div>
+      <div class="flow-connector">↓</div>
+      <div class="flow-step step-warning">
+        <div class="flow-step-icon">3</div>
+        <div class="flow-step-content">
+          <h4>Notify Collaborators</h4>
+          <p>Anyone who cloned the repo must re-clone. History was rewritten — their local copy still has the secret.</p>
+        </div>
+      </div>
+      <div class="flow-connector">↓</div>
+      <div class="flow-step step-success">
+        <div class="flow-step-icon">4</div>
+        <div class="flow-step-content">
+          <h4>Prevent Recurrence</h4>
+          <pre style="margin:.5rem 0;"><code>pip install detect-secrets pre-commit
+detect-secrets scan > .secrets.baseline
+pre-commit install</code></pre>
+          <p>Pre-commit hooks block secrets before they're ever committed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-i18n="footer.brand">Padang AI Coding Tools Class</div>
+        <div class="footer-copy" data-i18n="footer.tagline">Telkom AI Space / IndigoSpace Padang · MIT License</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html"   data-i18n="footer.home">Home</a></li>
+        <li><a href="tools.html"   data-i18n="footer.tools">Tools</a></li>
+        <li><a href="https://coderabbit.ai" target="_blank">CodeRabbit</a></li>
+      </ul>
+      <div class="footer-copy" data-i18n="footer.copy">© 2025 Padang AI Coding Tools Class.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

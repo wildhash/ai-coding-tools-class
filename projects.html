@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Projects — Padang AI Coding Tools Class</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container flex items-center justify-between" style="height:100%">
+    <a href="index.html" class="nav-logo">🤖 Padang AI Class</a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html"            data-i18n="nav.home">Home</a></li>
+      <li><a href="tools.html"            data-i18n="nav.tools">Tools</a></li>
+      <li><a href="claude-deep-dive.html" data-i18n="nav.claude">Claude</a></li>
+      <li><a href="security.html"         data-i18n="nav.security">Security</a></li>
+      <li><a href="free-tools.html"       data-i18n="nav.free">Free Tools</a></li>
+      <li><a href="resources.html"        data-i18n="nav.resources">Resources</a></li>
+      <li><a href="setup.html"            data-i18n="nav.setup">Setup</a></li>
+      <li><a href="projects.html"         data-i18n="nav.projects">Projects</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧 EN | 🇮🇩 ID</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<div class="page-header">
+  <div class="container">
+    <h1 data-i18n="projects.title">Student Projects</h1>
+    <p data-i18n="projects.sub">Five mini-projects to build during and after the workshop</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="flex flex-col gap-6">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-number">1</div>
+          <div>
+            <h2>Personal Profile Website</h2>
+            <div class="project-meta">
+              <span class="badge badge-success" data-i18n="projects.beginner">Beginner</span>
+              <span class="badge badge-accent">HTML/CSS/JS</span>
+              <span class="badge badge-muted">GitHub Pages</span>
+              <span class="badge badge-muted">Claude Web</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="text-muted">Build a personal portfolio page and deploy it live to GitHub Pages. This is the classic first project that every developer can show to employers.</p>
+          <div class="grid grid-2 gap-4 mt-4">
+            <div>
+              <strong>What to Build</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Hero section with your name and tagline</li>
+                <li>About section with your background</li>
+                <li>Skills / tools you know</li>
+                <li>Projects section (can be this class!)</li>
+                <li>Contact section with links</li>
+              </ul>
+            </div>
+            <div>
+              <strong data-i18n="projects.stretch">Stretch Goals</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Dark/light mode toggle</li>
+                <li>Smooth scroll navigation</li>
+                <li>CSS animations on scroll</li>
+                <li>Custom domain via Namecheap (free with Student Pack)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-prompt mt-4">
+            <strong>Starter Prompt</strong>
+            <pre style="background:none; border:none; padding:0; margin:.5rem 0 0; font-size:.85rem; white-space:pre-wrap; font-family:inherit;">Create a complete single-page personal portfolio website using HTML, CSS, and JavaScript.
+
+My name is [Your Name]. I am studying [Your Major] at [Your University] in Padang, Indonesia. My interests include [interests].
+
+Requirements:
+- Sticky navigation bar with smooth scroll links
+- Hero section with my name, tagline, and a "View My Work" button
+- About section (2-3 sentences)
+- Skills section showing: HTML, CSS, JavaScript, GitHub, Claude, VS Code
+- Projects section with 2-3 placeholder project cards
+- Contact section with GitHub and email links
+- Responsive on mobile and desktop
+- No frameworks — vanilla HTML/CSS/JS only
+- Modern dark theme with purple accent colors (#7c3aed)
+
+Return one complete HTML file starting with &lt;!DOCTYPE html&gt;.</pre>
+            <button class="prompt-copy-btn btn btn-sm btn-ghost mt-3" data-i18n="projects.prompt.copy">Copy Starter Prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-number">2</div>
+          <div>
+            <h2>AI Tools Directory</h2>
+            <div class="project-meta">
+              <span class="badge badge-success" data-i18n="projects.beginner">Beginner</span>
+              <span class="badge badge-accent">HTML/CSS/JS</span>
+              <span class="badge badge-muted">Cursor</span>
+              <span class="badge badge-muted">Copilot</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="text-muted">Build a searchable directory of AI coding tools — your own reference page that you can customize and share with others.</p>
+          <div class="grid grid-2 gap-4 mt-4">
+            <div>
+              <strong>What to Build</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Grid of tool cards (name, description, free badge)</li>
+                <li>Filter by category (AI Chat, IDE, Review, Deploy)</li>
+                <li>Search bar that filters in real time</li>
+                <li>Each card links to the official tool URL</li>
+              </ul>
+            </div>
+            <div>
+              <strong data-i18n="projects.stretch">Stretch Goals</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Add your own ratings or notes to each card</li>
+                <li>Save favorites to localStorage</li>
+                <li>Add a comparison mode (pick 2 tools, compare side by side)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-prompt mt-4">
+            <strong>Starter Prompt</strong>
+            <pre style="background:none; border:none; padding:0; margin:.5rem 0 0; font-size:.85rem; white-space:pre-wrap; font-family:inherit;">Build a searchable AI tools directory as a single HTML file.
+
+Include these tools: Claude, ChatGPT, Cursor, VS Code, GitHub Copilot, CodeRabbit, Lovable, Windsurf, Continue.dev, Google AI Studio.
+
+For each tool, show: emoji icon, name (as a hotlink to official URL), one-line description, category badge (AI Chat / IDE / Review / Deploy), free tier badge.
+
+Features:
+- CSS grid layout, 3 columns desktop / 2 tablet / 1 mobile
+- Filter buttons at top: All, AI Chat, IDE, Review, Deploy
+- Real-time search input that filters cards as you type
+- Smooth hover animations on cards
+- Dark theme matching: background #0f0f1a, accent #a78bfa
+
+Return one complete HTML file with all CSS and JS inline.</pre>
+            <button class="prompt-copy-btn btn btn-sm btn-ghost mt-3" data-i18n="projects.prompt.copy">Copy Starter Prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-number">3</div>
+          <div>
+            <h2>Prompt Library Website</h2>
+            <div class="project-meta">
+              <span class="badge badge-warning" data-i18n="projects.intermediate">Intermediate</span>
+              <span class="badge badge-accent">JavaScript</span>
+              <span class="badge badge-muted">Claude Code</span>
+              <span class="badge badge-muted">GitHub Pages</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="text-muted">Build a shareable library of your favorite AI prompts. A useful tool you'll actually keep using after the workshop.</p>
+          <div class="grid grid-2 gap-4 mt-4">
+            <div>
+              <strong>What to Build</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Categorized prompt cards (Coding, Debugging, Research, etc.)</li>
+                <li>One-click copy button on each prompt</li>
+                <li>Search by keyword</li>
+                <li>Fill-in-the-blank placeholders highlighted</li>
+              </ul>
+            </div>
+            <div>
+              <strong data-i18n="projects.stretch">Stretch Goals</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Add your own prompts via a form (stored in localStorage)</li>
+                <li>Export all prompts as a markdown file</li>
+                <li>Rate prompts (helpful / not helpful)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-prompt mt-4">
+            <strong>Starter Prompt</strong>
+            <pre style="background:none; border:none; padding:0; margin:.5rem 0 0; font-size:.85rem; white-space:pre-wrap; font-family:inherit;">Build a prompt library website as a single HTML file.
+
+Include 3 categories, 3 prompts each (9 total):
+
+Coding: (1) Write a function, (2) Refactor for readability, (3) Add error handling
+Debugging: (1) Fix an error, (2) Explain unexpected output, (3) Debug async code
+Learning: (1) Explain a concept, (2) Compare two approaches, (3) Suggest a learning plan
+
+Each prompt card should have:
+- Category badge
+- Prompt title
+- Full prompt text (use [PLACEHOLDERS] in brackets for fill-in parts)
+- Copy button that copies the text and shows "Copied!"
+
+Features:
+- Filter by category
+- Keyword search
+- Dark theme, responsive
+- Highlight [PLACEHOLDER] text in a different color
+
+Return one complete HTML file.</pre>
+            <button class="prompt-copy-btn btn btn-sm btn-ghost mt-3" data-i18n="projects.prompt.copy">Copy Starter Prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-number">4</div>
+          <div>
+            <h2>JavaScript Task Tracker</h2>
+            <div class="project-meta">
+              <span class="badge badge-warning" data-i18n="projects.intermediate">Intermediate</span>
+              <span class="badge badge-accent">JavaScript</span>
+              <span class="badge badge-muted">Copilot</span>
+              <span class="badge badge-muted">CodeRabbit</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="text-muted">Build a functional task tracker app using Copilot for autocomplete and CodeRabbit to review your PR. Great for learning JavaScript state management.</p>
+          <div class="grid grid-2 gap-4 mt-4">
+            <div>
+              <strong>What to Build</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Add tasks with a title and optional due date</li>
+                <li>Mark tasks complete (strikethrough)</li>
+                <li>Delete tasks</li>
+                <li>Persist tasks in localStorage</li>
+                <li>Filter: All / Active / Completed</li>
+              </ul>
+            </div>
+            <div>
+              <strong data-i18n="projects.stretch">Stretch Goals</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Drag-to-reorder tasks</li>
+                <li>Priority levels (High / Medium / Low) with color coding</li>
+                <li>Export tasks as CSV</li>
+                <li>Open a PR and let CodeRabbit review your JS</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-prompt mt-4">
+            <strong>Starter Prompt</strong>
+            <pre style="background:none; border:none; padding:0; margin:.5rem 0 0; font-size:.85rem; white-space:pre-wrap; font-family:inherit;">Build a task tracker app as a single HTML file using vanilla JavaScript.
+
+Features:
+- Input field + "Add Task" button
+- Task list with: checkbox (toggle complete), task text, delete button
+- Completed tasks shown with strikethrough and reduced opacity
+- Three filter buttons: All, Active, Completed
+- Task count: "X tasks remaining"
+- All tasks persist in localStorage (survive page refresh)
+- Empty state message when list is empty
+
+Design:
+- Dark theme, clean card layout
+- Smooth animations when adding/removing tasks
+- Responsive on mobile
+- No external libraries or frameworks
+
+Include input validation: prevent empty tasks.
+Return one complete HTML file.</pre>
+            <button class="prompt-copy-btn btn btn-sm btn-ghost mt-3" data-i18n="projects.prompt.copy">Copy Starter Prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-number">5</div>
+          <div>
+            <h2>Beginner Portfolio Page</h2>
+            <div class="project-meta">
+              <span class="badge badge-warning" data-i18n="projects.intermediate">Intermediate</span>
+              <span class="badge badge-accent">HTML/CSS/JS</span>
+              <span class="badge badge-muted">Claude Code</span>
+              <span class="badge badge-muted">All Tools</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="text-muted">Your class portfolio — document what you built during the workshop, what tools you used, and what you learned. Use every tool from the class to build it.</p>
+          <div class="grid grid-2 gap-4 mt-4">
+            <div>
+              <strong>What to Build</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>About: who you are, where you study</li>
+                <li>Workshop summary: what you learned today</li>
+                <li>Tools section: which ones you liked most</li>
+                <li>Projects gallery: link to everything you built</li>
+                <li>Next steps: what you plan to build next</li>
+              </ul>
+            </div>
+            <div>
+              <strong data-i18n="projects.stretch">Stretch Goals</strong>
+              <ul class="text-muted text-sm mt-2" style="display:flex; flex-direction:column; gap:.3rem;">
+                <li>Built with Claude Code from the terminal</li>
+                <li>CodeRabbit review on the final PR</li>
+                <li>Bilingual EN/ID toggle (like this site!)</li>
+                <li>Custom domain from Student Pack</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-prompt mt-4">
+            <strong>Claude Code Starter Session</strong>
+            <pre style="background:none; border:none; padding:0; margin:.5rem 0 0; font-size:.85rem; white-space:pre-wrap; font-family:inherit;">mkdir my-workshop-portfolio && cd my-workshop-portfolio
+git init
+claude
+
+# Then in the Claude Code session:
+/init
+
+Build a personal workshop portfolio website called "[Your Name]'s AI Coding Journey".
+
+Content:
+- Hero: my name, "I attended the Padang AI Coding Tools Class at IndigoSpace"
+- What I Learned: list of 5 things I learned today
+- Tools I Used: cards for Claude, ChatGPT, VS Code, Cursor, GitHub, CodeRabbit
+- What I Built: 2-3 project cards with placeholders
+- Next Steps: what I want to build next
+- Footer with my GitHub link
+
+Design: dark theme, purple accents, responsive
+Files: index.html + style.css + script.js (separate files)
+
+After building: git add . && git commit -m "feat: initial workshop portfolio"</pre>
+            <button class="prompt-copy-btn btn btn-sm btn-ghost mt-3" data-i18n="projects.prompt.copy">Copy Starter Prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.flex -->
+  </div><!-- /.container -->
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-i18n="footer.brand">Padang AI Coding Tools Class</div>
+        <div class="footer-copy" data-i18n="footer.tagline">Telkom AI Space / IndigoSpace Padang · MIT License</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html"  data-i18n="footer.home">Home</a></li>
+        <li><a href="setup.html"  data-i18n="nav.setup">Setup</a></li>
+        <li><a href="https://github.com/padangaiclass/padang-ai-coding-tools-class" target="_blank" data-i18n="footer.github">GitHub</a></li>
+      </ul>
+      <div class="footer-copy" data-i18n="footer.copy">© 2025 Padang AI Coding Tools Class.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

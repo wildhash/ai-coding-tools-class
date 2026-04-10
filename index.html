@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padang AI Coding Tools Class</title>
+  <meta name="description" content="Hands-on AI coding tools workshop at Telkom AI Space / IndigoSpace Padang — Claude, ChatGPT, Cursor, GitHub, Copilot, CodeRabbit and more.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Navbar ───────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="container flex items-center justify-between" style="height:100%">
+    <a href="index.html" class="nav-logo">🤖 Padang AI Class</a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html"            data-i18n="nav.home">Home</a></li>
+      <li><a href="tools.html"            data-i18n="nav.tools">Tools</a></li>
+      <li><a href="claude-deep-dive.html" data-i18n="nav.claude">Claude</a></li>
+      <li><a href="security.html"         data-i18n="nav.security">Security</a></li>
+      <li><a href="free-tools.html"       data-i18n="nav.free">Free Tools</a></li>
+      <li><a href="resources.html"        data-i18n="nav.resources">Resources</a></li>
+      <li><a href="setup.html"            data-i18n="nav.setup">Setup</a></li>
+      <li><a href="projects.html"         data-i18n="nav.projects">Projects</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+      <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧 EN | 🇮🇩 ID</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ── Hero ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow" data-i18n="index.eyebrow">🇮🇩 Telkom AI Space / IndigoSpace Padang</div>
+    <h1>
+      <span class="gradient-text" data-i18n="index.h1.line1">Modern AI Coding Tools</span><br>
+      <span data-i18n="index.h1.line2">For Every Developer</span>
+    </h1>
+    <p class="hero-tagline" data-i18n="index.tagline">
+      Hands-on workshop covering Claude, ChatGPT, Cursor, GitHub, Copilot, CodeRabbit, and more — all free. Build real projects. Ship them live.
+    </p>
+    <div class="hero-cta">
+      <a href="setup.html" class="btn btn-primary" data-i18n="index.cta.start">Start Here →</a>
+      <a href="tools.html" class="btn btn-secondary" data-i18n="index.cta.tools">View All Tools</a>
+    </div>
+
+    <!-- Workflow Arc -->
+    <div class="workflow-arc">
+      <h2 class="text-center" data-i18n="index.arc.title">THE WORKSHOP ARC</h2>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="workflow-badge" data-i18n="index.arc.think">Think</div>
+          <div class="workflow-desc" data-i18n="index.arc.think.d">Clarify the problem</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-badge" data-i18n="index.arc.prompt">Prompt</div>
+          <div class="workflow-desc" data-i18n="index.arc.prompt.d">Write clear instructions</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-badge" data-i18n="index.arc.build">Build</div>
+          <div class="workflow-desc" data-i18n="index.arc.build.d">Generate &amp; iterate</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-badge" data-i18n="index.arc.review">Review</div>
+          <div class="workflow-desc" data-i18n="index.arc.review.d">Security &amp; quality</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-badge" data-i18n="index.arc.commit">Commit</div>
+          <div class="workflow-desc" data-i18n="index.arc.commit.d">Push to GitHub</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-badge" data-i18n="index.arc.publish">Publish</div>
+          <div class="workflow-desc" data-i18n="index.arc.publish.d">Deploy &amp; share</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Core Tools Icon Grid ──────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="index.tools.title">Core Tools</h2>
+      <p data-i18n="index.tools.sub">Everything covered in this workshop has a meaningful free tier</p>
+    </div>
+    <div class="tools-grid stagger-children">
+
+      <div class="tool-card">
+        <div class="tool-icon">🤖</div>
+        <div>
+          <div class="tool-name"><a href="https://claude.ai" target="_blank" rel="noopener">Claude.ai</a></div>
+          <div class="tool-desc">AI assistant with 200k context window. Best for code review, long docs &amp; complex reasoning.</div>
+        </div>
+        <div class="tool-footer">
+          <div class="tool-card-badges">
+            <span class="badge badge-success">Free</span>
+            <span class="badge badge-accent">AI Chat</span>
+          </div>
+          <a href="claude-deep-dive.html" class="btn btn-sm btn-ghost">Deep Dive →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">💬</div>
+        <div>
+          <div class="tool-name"><a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a></div>
+          <div class="tool-desc">GPT-4o free tier. Excellent for explaining concepts, brainstorming &amp; quick code generation.</div>
+        </div>
+        <div class="tool-footer">
+          <div class="tool-card-badges">
+            <span class="badge badge-success">Free</span>
+            <span class="badge badge-accent">AI Chat</span>
+          </div>
+          <a href="tools.html" class="btn btn-sm btn-ghost">Details →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">⚡</div>
+        <div>
+          <div class="tool-name"><a href="https://cursor.sh" target="_blank" rel="noopener">Cursor</a></div>
+          <div class="tool-desc">AI-first code editor (VS Code fork). Inline AI, codebase-aware chat, multi-file Composer.</div>
+        </div>
+        <div class="tool-footer">
+          <div class="tool-card-badges">
+            <span class="badge badge-success">Free tier</span>
+            <span class="badge badge-accent">IDE</span>
+          </div>
+          <a href="tools.html" class="btn btn-sm btn-ghost">Details →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🐙</div>
+        <div>
+          <div class="tool-name"><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></div>
+          <div class="tool-desc">Code hosting, Actions CI/CD, Pages hosting, Copilot AI. The professional standard.</div>
+        </div>
+        <div class="tool-footer">
+          <div class="tool-card-badges">
+            <span class="badge badge-success">Free</span>
+            <span class="badge badge-accent">Platform</span>
+          </div>
+          <a href="https://github.com" target="_blank" class="btn btn-sm btn-ghost">Open →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🤝</div>
+        <div>
+          <div class="tool-name"><a href="https://copilot.github.com" target="_blank" rel="noopener">GitHub Copilot</a></div>
+          <div class="tool-desc">AI pair programmer in VS Code. Inline completions, chat panel, /review &amp; /tests commands.</div>
+        </div>
+        <div class="tool-footer">
+          <div class="tool-card-badges">
+            <span class="badge badge-success">Free for students</span>
+          </div>
+          <a href="https://education.github.com/pack" target="_blank" class="btn btn-sm btn-ghost">Get Free →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🐇</div>
+        <div>
+          <div class="tool-name"><a href="https://coderabbit.ai" target="_blank" rel="noopener">CodeRabbit</a></div>
+          <div class="tool-desc">AI-powered PR code review. Installs in 2 minutes. Reviews every PR automatically. Free for public repos.</div>
+        </div>
+        <div class="tool-footer">
+          <div class="tool-card-badges">
+            <span class="badge badge-success">Free public repos</span>
+            <span class="badge badge-warning">Review</span>
+          </div>
+          <a href="security.html" class="btn btn-sm btn-ghost">Setup →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── What You'll Build ─────────────────────────────────── -->
+<section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="index.build.title">What You'll Build</h2>
+      <p data-i18n="index.build.sub">Three real deliverables you take home</p>
+    </div>
+    <div class="grid grid-3 gap-6 stagger-children">
+
+      <div class="card">
+        <div style="font-size:2.5rem; margin-bottom:.75rem;">🌐</div>
+        <h3 data-i18n="index.build.1.title">Personal AI Tools Page</h3>
+        <p class="text-muted" data-i18n="index.build.1.desc">A deployed GitHub Pages site showcasing the tools you learned, styled with AI assistance.</p>
+        <div class="flex gap-2 mt-4 flex-wrap">
+          <span class="badge badge-accent">HTML/CSS</span>
+          <span class="badge badge-muted">GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="font-size:2.5rem; margin-bottom:.75rem;">⚙️</div>
+        <h3 data-i18n="index.build.2.title">AI-Assisted Mini App</h3>
+        <p class="text-muted" data-i18n="index.build.2.desc">A small web app built entirely with AI help, committed to your own GitHub repo.</p>
+        <div class="flex gap-2 mt-4 flex-wrap">
+          <span class="badge badge-accent">JavaScript</span>
+          <span class="badge badge-muted">Claude Code</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="font-size:2.5rem; margin-bottom:.75rem;">🔍</div>
+        <h3 data-i18n="index.build.3.title">Reviewed Pull Request</h3>
+        <p class="text-muted" data-i18n="index.build.3.desc">A PR on the class repo, automatically reviewed by CodeRabbit, with you responding to findings.</p>
+        <div class="flex gap-2 mt-4 flex-wrap">
+          <span class="badge badge-warning">CodeRabbit</span>
+          <span class="badge badge-muted">GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 10-Step Live Demo ─────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="index.demo.title">10-Step Live Demo</h2>
+      <p data-i18n="index.demo.sub">The instructor will walk through this exact flow during the workshop</p>
+    </div>
+    <div style="max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:.75rem;" class="stagger-children">
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">1</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.1">Open <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> — paste the README, ask for improvements</p>
+        </div>
+      </div>
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">2</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.2">Switch to <a href="https://claude.ai/download" target="_blank" rel="noopener">Claude Desktop</a> — connect filesystem MCP, read a file</p>
+        </div>
+      </div>
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">3</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.3">Terminal: run <code>claude</code>, do <code>/init</code>, ask for codebase explanation</p>
+        </div>
+      </div>
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">4</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.4">Create <a href="https://github.com/new" target="_blank" rel="noopener">GitHub repo</a>, clone, open in <a href="https://code.visualstudio.com" target="_blank" rel="noopener">VS Code</a> or <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor</a></p>
+        </div>
+      </div>
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">5</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.5">Use <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a> or <a href="https://claude.ai" target="_blank" rel="noopener">Claude Web</a> to draft an HTML page</p>
+        </div>
+      </div>
+      <div class="flow-step step-info">
+        <div class="flow-step-icon">6</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.6">Use <a href="https://copilot.github.com" target="_blank" rel="noopener">Copilot</a> autocomplete to finish a JS function live</p>
+        </div>
+      </div>
+      <div class="flow-step step-warning">
+        <div class="flow-step-icon">7</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.7">Commit with a meaningful message, push to GitHub</p>
+        </div>
+      </div>
+      <div class="flow-step step-warning">
+        <div class="flow-step-icon">8</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.8">Open a Pull Request on GitHub</p>
+        </div>
+      </div>
+      <div class="flow-step step-warning">
+        <div class="flow-step-icon">9</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.9">Watch <a href="https://coderabbit.ai" target="_blank" rel="noopener">CodeRabbit</a> post its automated review</p>
+        </div>
+      </div>
+      <div class="flow-step step-success">
+        <div class="flow-step-icon">🎉</div>
+        <div class="flow-step-content">
+          <p data-i18n="demo.10">Enable GitHub Pages, share the live URL with the class</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Venue / Details ───────────────────────────────────── -->
+<section class="section" style="background:var(--surface); border-top:1px solid var(--border);">
+  <div class="container" style="max-width:640px; text-align:center;">
+    <h2 data-i18n="index.venue.title">Workshop Details</h2>
+    <div class="card mt-6" style="text-align:left;">
+      <p style="font-size:1.05rem; margin-bottom:.5rem;" data-i18n="index.venue.loc">📍 Telkom AI Space / IndigoSpace Padang, Indonesia</p>
+      <p class="text-muted" data-i18n="index.venue.format">Format: Live in-person, hands-on</p>
+      <p class="text-muted" data-i18n="index.venue.level">Level: Beginner-friendly, no AI experience required</p>
+      <div class="divider"></div>
+      <div class="flex gap-3 flex-wrap">
+        <a href="setup.html" class="btn btn-primary">Get Set Up →</a>
+        <a href="https://github.com/padangaiclass/padang-ai-coding-tools-class" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-i18n="footer.brand">Padang AI Coding Tools Class</div>
+        <div class="footer-copy" data-i18n="footer.tagline">Telkom AI Space / IndigoSpace Padang · MIT License</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html"   data-i18n="footer.home">Home</a></li>
+        <li><a href="tools.html"   data-i18n="footer.tools">Tools</a></li>
+        <li><a href="https://github.com/padangaiclass/padang-ai-coding-tools-class" target="_blank" data-i18n="footer.github">GitHub Repo</a></li>
+        <li><a href="https://github.com/padangaiclass/padang-ai-coding-tools-class/blob/main/LICENSE" target="_blank" data-i18n="footer.license">MIT License</a></li>
+      </ul>
+      <div class="footer-copy" data-i18n="footer.copy">© 2025 Padang AI Coding Tools Class. Open source, free to use.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
