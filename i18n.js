@@ -14,8 +14,8 @@
   }
 
   function applyTranslations(lang) {
-    if (!window.translations || !window.translations[lang]) return;
-    const dict = window.translations[lang];
+    if (typeof translations === 'undefined' || !translations[lang]) return;
+    const dict = translations[lang];
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
