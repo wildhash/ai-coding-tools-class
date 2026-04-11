@@ -46,7 +46,6 @@
 
     document.querySelectorAll('.lang-toggle').forEach(function(btn) {
       btn.textContent = lang === 'id' ? '🇮🇩 ID | 🇬🇧 EN' : '🇬🇧 EN | 🇮🇩 ID';
-      btn.setAttribute('aria-pressed', lang === 'id' ? 'true' : 'false');
     });
 
     currentLang = lang;
