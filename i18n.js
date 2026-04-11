@@ -19,7 +19,10 @@
     // translations is defined in translations.js which loads first
     if (typeof translations === 'undefined') return;
     // Clamp unsupported locales to the default so the UI always renders
-    if (!translations[lang]) { lang = 'en'; }
+    if (!translations[lang]) {
+      lang = 'en';
+      saveLanguagePreference(lang);
+    }
     var dict = translations[lang];
 
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
@@ -46,6 +49,7 @@
 
     document.querySelectorAll('.lang-toggle').forEach(function(btn) {
       btn.textContent = lang === 'id' ? '🇮🇩 ID | 🇬🇧 EN' : '🇬🇧 EN | 🇮🇩 ID';
+      btn.setAttribute('aria-pressed', lang === 'id' ? 'true' : 'false');
     });
 
     currentLang = lang;
