@@ -17,13 +17,21 @@
 
   function applyTranslations(lang) {
     // translations is defined in translations.js which loads first
-    if (typeof translations === 'undefined' || !translations[lang]) return;
+    if (typeof translations === 'undefined') return;
+    // Clamp unsupported locales to the default so the UI always renders
+    if (!translations[lang]) {
+      lang = 'en';
+      saveLanguagePreference(lang);
+    }
     var dict = translations[lang];
 
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       var key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) {
-        el.textContent = dict[key];
+        // Use innerHTML so any HTML markup in translation strings is rendered
+        // correctly (e.g. links, <code> elements); translations.js is static
+        // site code, so there is no XSS risk from external input.
+        el.innerHTML = dict[key];
       }
     });
 
@@ -32,10 +40,16 @@
       if (dict[key] !== undefined) el.placeholder = dict[key];
     });
 
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+    });
+
     document.documentElement.lang = lang === 'id' ? 'id' : 'en';
 
     document.querySelectorAll('.lang-toggle').forEach(function(btn) {
       btn.textContent = lang === 'id' ? '🇮🇩 ID | 🇬🇧 EN' : '🇬🇧 EN | 🇮🇩 ID';
+      btn.setAttribute('aria-pressed', lang === 'id' ? 'true' : 'false');
     });
 
     currentLang = lang;
