@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
+<!DOCTYPE html><html lang="en" data-theme="dark"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tools — Padang AI Coding Tools Class</title>
@@ -11,19 +9,19 @@
 
 <nav class="navbar">
   <div class="container flex items-center justify-between" style="height:100%">
-    <a href="index.html" class="nav-logo">🤖 Padang AI Class</a>
+    <a href="index.html" class="nav-logo" data-i18n="auto.tools.001">🤖 Padang AI Class</a>
     <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"            data-i18n="nav.home">Home</a></li>
-      <li><a href="tools.html"            data-i18n="nav.tools">Tools</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="tools.html" data-i18n="nav.tools">Tools</a></li>
       <li><a href="claude-deep-dive.html" data-i18n="nav.claude">Claude</a></li>
-      <li><a href="security.html"         data-i18n="nav.security">Security</a></li>
-      <li><a href="free-tools.html"       data-i18n="nav.free">Free Tools</a></li>
-      <li><a href="resources.html"        data-i18n="nav.resources">Resources</a></li>
-      <li><a href="setup.html"            data-i18n="nav.setup">Setup</a></li>
-      <li><a href="projects.html"         data-i18n="nav.projects">Projects</a></li>
+      <li><a href="security.html" data-i18n="nav.security">Security</a></li>
+      <li><a href="free-tools.html" data-i18n="nav.free">Free Tools</a></li>
+      <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+      <li><a href="setup.html" data-i18n="nav.setup">Setup</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
     </ul>
     <div class="nav-controls">
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
@@ -46,25 +44,25 @@
 
     <!-- Filter Bar -->
     <div class="filter-bar" role="group" aria-label="Filter tools">
-      <button class="filter-btn active" data-filter="all"    data-i18n="tools.filter.all">All</button>
-      <button class="filter-btn" data-filter="ai"            data-i18n="tools.filter.ai">AI Chat</button>
-      <button class="filter-btn" data-filter="ide"           data-i18n="tools.filter.ide">Coding IDE</button>
-      <button class="filter-btn" data-filter="review"        data-i18n="tools.filter.review">Code Review</button>
-      <button class="filter-btn" data-filter="deploy"        data-i18n="tools.filter.deploy">Deploy</button>
-      <button class="filter-btn" data-filter="free"          data-i18n="tools.filter.free">Free Tier</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="tools.filter.all">All</button>
+      <button class="filter-btn" data-filter="ai" data-i18n="tools.filter.ai">AI Chat</button>
+      <button class="filter-btn" data-filter="ide" data-i18n="tools.filter.ide">Coding IDE</button>
+      <button class="filter-btn" data-filter="review" data-i18n="tools.filter.review">Code Review</button>
+      <button class="filter-btn" data-filter="deploy" data-i18n="tools.filter.deploy">Deploy</button>
+      <button class="filter-btn" data-filter="free" data-i18n="tools.filter.free">Free Tier</button>
     </div>
 
     <!-- Claude Family Callout -->
     <div class="callout callout-info mb-8">
-      <div class="callout-icon">🤖</div>
+      <div class="callout-icon" data-i18n="auto.tools.002">🤖</div>
       <div>
         <div class="callout-title" data-i18n="tools.claude.family">The Claude Family</div>
         <p class="callout-body" data-i18n="tools.claude.fam.sub">Four surfaces, one AI — choose the right one for your workflow</p>
         <div class="flex gap-2 mt-4 flex-wrap">
-          <a href="https://claude.ai" target="_blank" class="btn btn-sm btn-ghost">Web</a>
-          <a href="https://claude.ai/download" target="_blank" class="btn btn-sm btn-ghost">Desktop</a>
-          <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" class="btn btn-sm btn-ghost">Code CLI</a>
-          <a href="claude-deep-dive.html" class="btn btn-sm btn-primary">Full Deep Dive →</a>
+          <a href="https://claude.ai" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.003">Web</a>
+          <a href="https://claude.ai/download" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.004">Desktop</a>
+          <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.005">Code CLI</a>
+          <a href="claude-deep-dive.html" class="btn btn-sm btn-primary" data-i18n="auto.tools.006">Full Deep Dive →</a>
         </div>
       </div>
     </div>
@@ -76,15 +74,15 @@
       <div class="tool-card" data-tags="ai,free">
         <div class="tool-icon">🤖</div>
         <div>
-          <div class="tool-name"><a href="https://claude.ai" target="_blank" rel="noopener">Claude Web</a></div>
-          <div class="tool-desc">Best AI for long-context work. 200k token window. Projects, Artifacts, Extended Thinking. Free tier ~30 messages/day on Sonnet.</div>
+          <div class="tool-name"><a href="https://claude.ai" target="_blank" rel="noopener" data-i18n="auto.tools.007">Claude Web</a></div>
+          <div class="tool-desc" data-i18n="tools.card.claudeweb.desc">Best AI for long-context work. 200k token window. Projects, Artifacts, Extended Thinking. Free tier ~30 messages/day on Sonnet.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free</span>
             <span class="badge badge-accent">AI Chat</span>
           </div>
-          <a href="claude-deep-dive.html" class="btn btn-sm btn-ghost">Learn →</a>
+          <a href="claude-deep-dive.html" class="btn btn-sm btn-ghost" data-i18n="auto.tools.008">Learn →</a>
         </div>
       </div>
 
@@ -92,15 +90,15 @@
       <div class="tool-card" data-tags="ai,free">
         <div class="tool-icon">💻</div>
         <div>
-          <div class="tool-name"><a href="https://claude.ai/download" target="_blank" rel="noopener">Claude Desktop</a></div>
-          <div class="tool-desc">Native app with MCP server support. Connect Claude to your local filesystem, GitHub, browser, and databases. Game-changer for local development.</div>
+          <div class="tool-name"><a href="https://claude.ai/download" target="_blank" rel="noopener" data-i18n="auto.tools.009">Claude Desktop</a></div>
+          <div class="tool-desc" data-i18n="tools.card.claudedesktop.desc">Native app with MCP server support. Connect Claude to your local filesystem, GitHub, browser, and databases. Game-changer for local development.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free</span>
             <span class="badge badge-accent">Desktop</span>
           </div>
-          <a href="claude-deep-dive.html#desktop" class="btn btn-sm btn-ghost">MCP Guide →</a>
+          <a href="claude-deep-dive.html#desktop" class="btn btn-sm btn-ghost" data-i18n="auto.tools.010">MCP Guide →</a>
         </div>
       </div>
 
@@ -108,15 +106,15 @@
       <div class="tool-card" data-tags="ai,ide,free">
         <div class="tool-icon">⌨️</div>
         <div>
-          <div class="tool-name"><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener">Claude Code</a></div>
-          <div class="tool-desc">Terminal AI coding agent. Reads your entire codebase, writes files, runs commands. Install: <code>npm install -g @anthropic-ai/claude-code</code></div>
+          <div class="tool-name"><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener" data-i18n="auto.tools.011">Claude Code</a></div>
+          <div class="tool-desc" data-i18n-html="tools.card.claudecode.desc">Terminal AI coding agent. Reads your entire codebase, writes files, runs commands. Install: <code>npm install -g @anthropic-ai/claude-code</code></div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-warning">API credits</span>
             <span class="badge badge-accent">CLI Agent</span>
           </div>
-          <a href="claude-deep-dive.html#code" class="btn btn-sm btn-ghost">Commands →</a>
+          <a href="claude-deep-dive.html#code" class="btn btn-sm btn-ghost" data-i18n="auto.tools.012">Commands →</a>
         </div>
       </div>
 
@@ -124,15 +122,15 @@
       <div class="tool-card" data-tags="ai,free">
         <div class="tool-icon">💬</div>
         <div>
-          <div class="tool-name"><a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a></div>
-          <div class="tool-desc">GPT-4o on free tier. Best for explaining concepts to beginners, brainstorming, and quick code generation. Code Interpreter runs Python live.</div>
+          <div class="tool-name"><a href="https://chatgpt.com" target="_blank" rel="noopener" data-i18n="auto.tools.013">ChatGPT</a></div>
+          <div class="tool-desc" data-i18n="tools.card.chatgpt.desc">GPT-4o on free tier. Best for explaining concepts to beginners, brainstorming, and quick code generation. Code Interpreter runs Python live.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free</span>
             <span class="badge badge-accent">AI Chat</span>
           </div>
-          <a href="https://chatgpt.com" target="_blank" class="btn btn-sm btn-ghost">Open →</a>
+          <a href="https://chatgpt.com" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.014">Open →</a>
         </div>
       </div>
 
@@ -140,15 +138,15 @@
       <div class="tool-card" data-tags="ide,free">
         <div class="tool-icon">📝</div>
         <div>
-          <div class="tool-name"><a href="https://code.visualstudio.com" target="_blank" rel="noopener">VS Code</a></div>
-          <div class="tool-desc">The world's most popular code editor. Free, open source, 50k+ extensions. Built-in Git, debugger, terminal. Runs offline.</div>
+          <div class="tool-name"><a href="https://code.visualstudio.com" target="_blank" rel="noopener" data-i18n="auto.tools.015">VS Code</a></div>
+          <div class="tool-desc" data-i18n="tools.card.vscode.desc">The world's most popular code editor. Free, open source, 50k+ extensions. Built-in Git, debugger, terminal. Runs offline.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">100% Free</span>
             <span class="badge badge-accent">IDE</span>
           </div>
-          <a href="https://code.visualstudio.com" target="_blank" class="btn btn-sm btn-ghost">Download →</a>
+          <a href="https://code.visualstudio.com" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.016">Download →</a>
         </div>
       </div>
 
@@ -156,15 +154,15 @@
       <div class="tool-card" data-tags="ide,free">
         <div class="tool-icon">⚡</div>
         <div>
-          <div class="tool-name"><a href="https://cursor.sh" target="_blank" rel="noopener">Cursor</a></div>
-          <div class="tool-desc">AI-first IDE built on VS Code. Inline edits (<kbd>Ctrl+K</kbd>), codebase-aware chat (<kbd>Ctrl+L</kbd>), multi-file Composer. 2000 free completions/month.</div>
+          <div class="tool-name"><a href="https://cursor.sh" target="_blank" rel="noopener" data-i18n="auto.tools.017">Cursor</a></div>
+          <div class="tool-desc" data-i18n-html="tools.card.cursor.desc">AI-first IDE built on VS Code. Inline edits (<kbd>Ctrl+K</kbd>), codebase-aware chat (<kbd>Ctrl+L</kbd>), multi-file Composer. 2000 free completions/month.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free tier</span>
             <span class="badge badge-accent">IDE</span>
           </div>
-          <a href="https://cursor.sh" target="_blank" class="btn btn-sm btn-ghost">Download →</a>
+          <a href="https://cursor.sh" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.018">Download →</a>
         </div>
       </div>
 
@@ -172,15 +170,15 @@
       <div class="tool-card" data-tags="ide,deploy,free">
         <div class="tool-icon">🐙</div>
         <div>
-          <div class="tool-name"><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></div>
-          <div class="tool-desc">Code hosting, Actions CI/CD (2000 min/month free), Pages static hosting, Issues project management. The industry standard.</div>
+          <div class="tool-name"><a href="https://github.com" target="_blank" rel="noopener" data-i18n="auto.tools.019">GitHub</a></div>
+          <div class="tool-desc" data-i18n="tools.card.github.desc">Code hosting, Actions CI/CD (2000 min/month free), Pages static hosting, Issues project management. The industry standard.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free</span>
             <span class="badge badge-accent">Platform</span>
           </div>
-          <a href="https://github.com" target="_blank" class="btn btn-sm btn-ghost">Open →</a>
+          <a href="https://github.com" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.020">Open →</a>
         </div>
       </div>
 
@@ -188,14 +186,14 @@
       <div class="tool-card" data-tags="ide,free">
         <div class="tool-icon">🤝</div>
         <div>
-          <div class="tool-name"><a href="https://copilot.github.com" target="_blank" rel="noopener">GitHub Copilot</a></div>
-          <div class="tool-desc">AI pair programmer in VS Code. Real-time completions, Copilot Chat sidebar, slash commands: <code>/explain</code> <code>/fix</code> <code>/tests</code> <code>/review</code></div>
+          <div class="tool-name"><a href="https://copilot.github.com" target="_blank" rel="noopener" data-i18n="auto.tools.021">GitHub Copilot</a></div>
+          <div class="tool-desc" data-i18n-html="tools.card.copilot.desc">AI pair programmer in VS Code. Real-time completions, Copilot Chat sidebar, slash commands: <code>/explain</code> <code>/fix</code> <code>/tests</code> <code>/review</code></div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free for students</span>
           </div>
-          <a href="https://education.github.com/pack" target="_blank" class="btn btn-sm btn-ghost">Get Free →</a>
+          <a href="https://education.github.com/pack" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.022">Get Free →</a>
         </div>
       </div>
 
@@ -203,14 +201,14 @@
       <div class="tool-card" data-tags="ide,free">
         <div class="tool-icon">☁️</div>
         <div>
-          <div class="tool-name"><a href="https://github.com/features/codespaces" target="_blank" rel="noopener">GitHub Codespaces</a></div>
-          <div class="tool-desc">Full VS Code environment in your browser. No local setup needed. 60 hours/month free. Perfect for workshops.</div>
+          <div class="tool-name"><a href="https://github.com/features/codespaces" target="_blank" rel="noopener" data-i18n="auto.tools.023">GitHub Codespaces</a></div>
+          <div class="tool-desc" data-i18n="tools.card.codespaces.desc">Full VS Code environment in your browser. No local setup needed. 60 hours/month free. Perfect for workshops.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">60 hrs/month free</span>
           </div>
-          <a href="https://github.com/features/codespaces" target="_blank" class="btn btn-sm btn-ghost">Open →</a>
+          <a href="https://github.com/features/codespaces" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.024">Open →</a>
         </div>
       </div>
 
@@ -218,15 +216,15 @@
       <div class="tool-card" data-tags="review,free">
         <div class="tool-icon">🐇</div>
         <div>
-          <div class="tool-name"><a href="https://coderabbit.ai" target="_blank" rel="noopener">CodeRabbit</a></div>
-          <div class="tool-desc">Automated AI PR code review. Installs in 2 minutes on GitHub. Reviews every PR — bugs, security, style. Free for all public repos.</div>
+          <div class="tool-name"><a href="https://coderabbit.ai" target="_blank" rel="noopener" data-i18n="auto.tools.025">CodeRabbit</a></div>
+          <div class="tool-desc" data-i18n="tools.card.coderabbit.desc">Automated AI PR code review. Installs in 2 minutes on GitHub. Reviews every PR — bugs, security, style. Free for all public repos.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free public repos</span>
             <span class="badge badge-warning">Review</span>
           </div>
-          <a href="security.html" class="btn btn-sm btn-ghost">Setup →</a>
+          <a href="security.html" class="btn btn-sm btn-ghost" data-i18n="auto.tools.026">Setup →</a>
         </div>
       </div>
 
@@ -234,15 +232,15 @@
       <div class="tool-card" data-tags="review">
         <div class="tool-icon">🔭</div>
         <div>
-          <div class="tool-name"><a href="https://macroscope.io" target="_blank" rel="noopener">Macroscope</a></div>
-          <div class="tool-desc">Codebase intelligence — complexity maps, dependency graphs, hotspot detection. Understand any codebase at a glance.</div>
+          <div class="tool-name"><a href="https://macroscope.io" target="_blank" rel="noopener" data-i18n="auto.tools.027">Macroscope</a></div>
+          <div class="tool-desc" data-i18n="tools.card.macroscope.desc">Codebase intelligence — complexity maps, dependency graphs, hotspot detection. Understand any codebase at a glance.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-muted">Free beta</span>
             <span class="badge badge-warning">Analysis</span>
           </div>
-          <a href="https://macroscope.io" target="_blank" class="btn btn-sm btn-ghost">Open →</a>
+          <a href="https://macroscope.io" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.028">Open →</a>
         </div>
       </div>
 
@@ -250,15 +248,15 @@
       <div class="tool-card" data-tags="ai,deploy,free">
         <div class="tool-icon">💜</div>
         <div>
-          <div class="tool-name"><a href="https://lovable.dev" target="_blank" rel="noopener">Lovable</a></div>
-          <div class="tool-desc">Describe what you want → get a full React + Supabase app. Excellent for prototyping and hackathons. Generated code is yours to export.</div>
+          <div class="tool-name"><a href="https://lovable.dev" target="_blank" rel="noopener" data-i18n="auto.tools.029">Lovable</a></div>
+          <div class="tool-desc" data-i18n="tools.card.lovable.desc">Describe what you want → get a full React + Supabase app. Excellent for prototyping and hackathons. Generated code is yours to export.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free tier</span>
             <span class="badge badge-accent">App Builder</span>
           </div>
-          <a href="https://lovable.dev" target="_blank" class="btn btn-sm btn-ghost">Open →</a>
+          <a href="https://lovable.dev" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.030">Open →</a>
         </div>
       </div>
 
@@ -266,15 +264,15 @@
       <div class="tool-card" data-tags="deploy,free">
         <div class="tool-icon">▲</div>
         <div>
-          <div class="tool-name"><a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></div>
-          <div class="tool-desc">Connect GitHub → deploy in 60 seconds. Free hobby tier: unlimited projects, 100GB bandwidth/month, automatic HTTPS.</div>
+          <div class="tool-name"><a href="https://vercel.com" target="_blank" rel="noopener" data-i18n="auto.tools.031">Vercel</a></div>
+          <div class="tool-desc" data-i18n="tools.card.vercel.desc">Connect GitHub → deploy in 60 seconds. Free hobby tier: unlimited projects, 100GB bandwidth/month, automatic HTTPS.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free hobby tier</span>
             <span class="badge badge-accent">Deploy</span>
           </div>
-          <a href="https://vercel.com" target="_blank" class="btn btn-sm btn-ghost">Open →</a>
+          <a href="https://vercel.com" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.032">Open →</a>
         </div>
       </div>
 
@@ -282,15 +280,15 @@
       <div class="tool-card" data-tags="ide,free">
         <div class="tool-icon">🌊</div>
         <div>
-          <div class="tool-name"><a href="https://codeium.com/windsurf" target="_blank" rel="noopener">Windsurf</a></div>
-          <div class="tool-desc">AI IDE by Codeium with unlimited free completions. Cascade agent for multi-step tasks. Best free Cursor alternative.</div>
+          <div class="tool-name"><a href="https://codeium.com/windsurf" target="_blank" rel="noopener" data-i18n="auto.tools.033">Windsurf</a></div>
+          <div class="tool-desc" data-i18n="tools.card.windsurf.desc">AI IDE by Codeium with unlimited free completions. Cascade agent for multi-step tasks. Best free Cursor alternative.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free unlimited</span>
             <span class="badge badge-accent">IDE</span>
           </div>
-          <a href="https://codeium.com/windsurf" target="_blank" class="btn btn-sm btn-ghost">Download →</a>
+          <a href="https://codeium.com/windsurf" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.034">Download →</a>
         </div>
       </div>
 
@@ -298,15 +296,15 @@
       <div class="tool-card" data-tags="ide,free">
         <div class="tool-icon">🔄</div>
         <div>
-          <div class="tool-name"><a href="https://continue.dev" target="_blank" rel="noopener">Continue.dev</a></div>
-          <div class="tool-desc">Open-source VS Code extension. Connect to any model — Gemini free API, Claude, local Ollama. Free Copilot alternative.</div>
+          <div class="tool-name"><a href="https://continue.dev" target="_blank" rel="noopener" data-i18n="auto.tools.035">Continue.dev</a></div>
+          <div class="tool-desc" data-i18n="tools.card.continue.desc">Open-source VS Code extension. Connect to any model — Gemini free API, Claude, local Ollama. Free Copilot alternative.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">100% Free</span>
             <span class="badge badge-accent">Extension</span>
           </div>
-          <a href="https://continue.dev" target="_blank" class="btn btn-sm btn-ghost">Install →</a>
+          <a href="https://continue.dev" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.036">Install →</a>
         </div>
       </div>
 
@@ -314,15 +312,15 @@
       <div class="tool-card" data-tags="ai,free">
         <div class="tool-icon">✨</div>
         <div>
-          <div class="tool-name"><a href="https://aistudio.google.com" target="_blank" rel="noopener">Google AI Studio</a></div>
-          <div class="tool-desc">Free Gemini API key. 1M token context window. No credit card needed. Use with Continue.dev or Aider for free AI coding.</div>
+          <div class="tool-name"><a href="https://aistudio.google.com" target="_blank" rel="noopener" data-i18n="auto.tools.037">Google AI Studio</a></div>
+          <div class="tool-desc" data-i18n="tools.card.aistudio.desc">Free Gemini API key. 1M token context window. No credit card needed. Use with Continue.dev or Aider for free AI coding.</div>
         </div>
         <div class="tool-footer">
           <div class="tool-card-badges">
             <span class="badge badge-success">Free API</span>
             <span class="badge badge-accent">AI Platform</span>
           </div>
-          <a href="https://aistudio.google.com" target="_blank" class="btn btn-sm btn-ghost">Get Key →</a>
+          <a href="https://aistudio.google.com" target="_blank" class="btn btn-sm btn-ghost" data-i18n="auto.tools.038">Get Key →</a>
         </div>
       </div>
 
@@ -340,8 +338,8 @@
         <div class="footer-copy" data-i18n="footer.tagline">Telkom AI Space / IndigoSpace Padang · MIT License</div>
       </div>
       <ul class="footer-links">
-        <li><a href="index.html"  data-i18n="footer.home">Home</a></li>
-        <li><a href="tools.html"  data-i18n="footer.tools">Tools</a></li>
+        <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+        <li><a href="tools.html" data-i18n="footer.tools">Tools</a></li>
         <li><a href="https://github.com/padangaiclass/padang-ai-coding-tools-class" target="_blank" data-i18n="footer.github">GitHub</a></li>
       </ul>
       <div class="footer-copy" data-i18n="footer.copy">© 2025 Padang AI Coding Tools Class. Open source.</div>
@@ -352,5 +350,6 @@
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
-</body>
-</html>
+
+
+</body></html>

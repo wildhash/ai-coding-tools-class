@@ -26,9 +26,23 @@
       }
     });
 
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) {
+        el.innerHTML = dict[key];
+      }
+    });
+
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-placeholder');
       if (dict[key] !== undefined) el.placeholder = dict[key];
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) {
+        el.setAttribute('aria-label', dict[key]);
+      }
     });
 
     document.documentElement.lang = lang === 'id' ? 'id' : 'en';
@@ -37,6 +51,7 @@
       btn.textContent = lang === 'id'
         ? '\uD83C\uDDEE\uD83C\uDDE9 ID | \uD83C\uDDEC\uD83C\uDDE7 EN'
         : '\uD83C\uDDEC\uD83C\uDDE7 EN | \uD83C\uDDEE\uD83C\uDDE9 ID';
+      btn.setAttribute('aria-pressed', lang === 'id' ? 'true' : 'false');
     });
 
     currentLang = lang;

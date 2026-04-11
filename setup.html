@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
+<!DOCTYPE html><html lang="en" data-theme="dark"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Setup — Padang AI Coding Tools Class</title>
@@ -10,19 +8,19 @@
 
 <nav class="navbar">
   <div class="container flex items-center justify-between" style="height:100%">
-    <a href="index.html" class="nav-logo">🤖 Padang AI Class</a>
+    <a href="index.html" class="nav-logo" data-i18n="auto.setup.001">🤖 Padang AI Class</a>
     <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"            data-i18n="nav.home">Home</a></li>
-      <li><a href="tools.html"            data-i18n="nav.tools">Tools</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="tools.html" data-i18n="nav.tools">Tools</a></li>
       <li><a href="claude-deep-dive.html" data-i18n="nav.claude">Claude</a></li>
-      <li><a href="security.html"         data-i18n="nav.security">Security</a></li>
-      <li><a href="free-tools.html"       data-i18n="nav.free">Free Tools</a></li>
-      <li><a href="resources.html"        data-i18n="nav.resources">Resources</a></li>
-      <li><a href="setup.html"            data-i18n="nav.setup">Setup</a></li>
-      <li><a href="projects.html"         data-i18n="nav.projects">Projects</a></li>
+      <li><a href="security.html" data-i18n="nav.security">Security</a></li>
+      <li><a href="free-tools.html" data-i18n="nav.free">Free Tools</a></li>
+      <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+      <li><a href="setup.html" data-i18n="nav.setup">Setup</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
     </ul>
     <div class="nav-controls">
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
@@ -47,7 +45,7 @@
     <div class="card mb-6">
       <div class="card-header">
         <div class="card-title" data-i18n="setup.progress.label">Setup Progress</div>
-        <span class="progress-count text-muted">0 / 12</span>
+        <span class="progress-count text-muted" data-i18n="auto.setup.002">0 / 12</span>
       </div>
       <div class="progress-wrap">
         <div class="progress-bar"></div>
@@ -62,25 +60,25 @@
       </div>
 
       <ul class="checklist">
-        <li>
+        <li data-i18n-html="auto.setup.003">
           <input type="checkbox" id="s1">
           <label for="s1">
             <strong><a href="https://git-scm.com/downloads" target="_blank">Git</a></strong> — Version control. Install from git-scm.com. Verify: <code>git --version</code>
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.004">
           <input type="checkbox" id="s2">
           <label for="s2">
             <strong><a href="https://code.visualstudio.com/download" target="_blank">VS Code</a></strong> — Code editor. Download from code.visualstudio.com. Verify: <code>code --version</code>
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.005">
           <input type="checkbox" id="s3">
           <label for="s3">
             <strong><a href="https://github.com/signup" target="_blank">GitHub Account</a></strong> — Use your university email! Enables the free Student Pack.
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.006">
           <input type="checkbox" id="s4">
           <label for="s4">
             <strong><a href="https://claude.ai" target="_blank">Claude.ai Account</a></strong> — Free. Sign up with Google or email. Test: type "Hello!" and confirm Claude responds.
@@ -97,31 +95,31 @@
       </div>
 
       <ul class="checklist">
-        <li>
+        <li data-i18n-html="auto.setup.007">
           <input type="checkbox" id="s5">
           <label for="s5">
             <strong><a href="https://nodejs.org" target="_blank">Node.js LTS</a></strong> — Required for Claude Code. Download LTS from nodejs.org. Verify: <code>node --version</code> and <code>npm --version</code>
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.008">
           <input type="checkbox" id="s6">
           <label for="s6">
             <strong><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code CLI</a></strong> — After Node.js: <code>npm install -g @anthropic-ai/claude-code</code> then <code>claude auth login</code>
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.009">
           <input type="checkbox" id="s7">
           <label for="s7">
             <strong><a href="https://cursor.sh" target="_blank">Cursor</a></strong> — AI-first IDE. Free Hobby plan. Download and create a free account. Import your VS Code settings.
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.010">
           <input type="checkbox" id="s8">
           <label for="s8">
             <strong><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank">GitHub Copilot Extension</a></strong> — In VS Code: Extensions → search "GitHub Copilot" → Install → Sign in with GitHub. Free for students via <a href="https://education.github.com/pack" target="_blank">Student Pack</a>.
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.011">
           <input type="checkbox" id="s9">
           <label for="s9">
             <strong><a href="https://education.github.com/pack" target="_blank">GitHub Student Developer Pack</a></strong> — Apply with your university email. Approval: 1–3 days. Unlocks Copilot, Codespaces, and 100+ tools free.
@@ -138,19 +136,19 @@
       </div>
 
       <ul class="checklist">
-        <li>
+        <li data-i18n-html="auto.setup.012">
           <input type="checkbox" id="s10">
           <label for="s10">
             <strong><a href="https://claude.ai/download" target="_blank">Claude Desktop</a></strong> — Install the native app. Enables MCP server connections.
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.013">
           <input type="checkbox" id="s11">
           <label for="s11">
             <strong>Filesystem MCP Server</strong> — After Claude Desktop: <code>npm install -g @modelcontextprotocol/server-filesystem</code> then configure in Claude Desktop settings.
           </label>
         </li>
-        <li>
+        <li data-i18n-html="auto.setup.014">
           <input type="checkbox" id="s12">
           <label for="s12">
             <strong><a href="https://marketplace.visualstudio.com/items?itemName=Continue.continue" target="_blank">Continue.dev</a></strong> — Open-source AI coding extension. Free. Connect to free Gemini API from <a href="https://aistudio.google.com" target="_blank">Google AI Studio</a>.
@@ -163,7 +161,7 @@
 
     <!-- Trouble note -->
     <div class="callout callout-info mt-6">
-      <div class="callout-icon">💬</div>
+      <div class="callout-icon" data-i18n="auto.setup.015">💬</div>
       <div>
         <span data-i18n="setup.trouble">Having trouble? Check the</span>
         <a href="https://github.com/padangaiclass/padang-ai-coding-tools-class/blob/main/docs/troubleshooting.md" target="_blank" data-i18n="setup.trouble.link">troubleshooting guide</a>
@@ -183,9 +181,9 @@
         <div class="footer-copy" data-i18n="footer.tagline">Telkom AI Space / IndigoSpace Padang · MIT License</div>
       </div>
       <ul class="footer-links">
-        <li><a href="index.html"      data-i18n="footer.home">Home</a></li>
+        <li><a href="index.html" data-i18n="footer.home">Home</a></li>
         <li><a href="free-tools.html" data-i18n="nav.free">Free Tools</a></li>
-        <li><a href="https://github.com/padangaiclass/padang-ai-coding-tools-class/blob/main/docs/troubleshooting.md" target="_blank">Troubleshooting</a></li>
+        <li data-i18n-html="auto.setup.016"><a href="https://github.com/padangaiclass/padang-ai-coding-tools-class/blob/main/docs/troubleshooting.md" target="_blank">Troubleshooting</a></li>
       </ul>
       <div class="footer-copy" data-i18n="footer.copy">© 2025 Padang AI Coding Tools Class.</div>
     </div>
@@ -195,5 +193,6 @@
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
-</body>
-</html>
+
+
+</body></html>

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
+<!DOCTYPE html><html lang="en" data-theme="dark"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Claude Deep Dive — Padang AI Coding Tools Class</title>
@@ -10,19 +8,19 @@
 
 <nav class="navbar">
   <div class="container flex items-center justify-between" style="height:100%">
-    <a href="index.html" class="nav-logo">🤖 Padang AI Class</a>
+    <a href="index.html" class="nav-logo" data-i18n="auto.claude-deep-dive.001">🤖 Padang AI Class</a>
     <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"            data-i18n="nav.home">Home</a></li>
-      <li><a href="tools.html"            data-i18n="nav.tools">Tools</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="tools.html" data-i18n="nav.tools">Tools</a></li>
       <li><a href="claude-deep-dive.html" data-i18n="nav.claude">Claude</a></li>
-      <li><a href="security.html"         data-i18n="nav.security">Security</a></li>
-      <li><a href="free-tools.html"       data-i18n="nav.free">Free Tools</a></li>
-      <li><a href="resources.html"        data-i18n="nav.resources">Resources</a></li>
-      <li><a href="setup.html"            data-i18n="nav.setup">Setup</a></li>
-      <li><a href="projects.html"         data-i18n="nav.projects">Projects</a></li>
+      <li><a href="security.html" data-i18n="nav.security">Security</a></li>
+      <li><a href="free-tools.html" data-i18n="nav.free">Free Tools</a></li>
+      <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+      <li><a href="setup.html" data-i18n="nav.setup">Setup</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
     </ul>
     <div class="nav-controls">
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
@@ -46,19 +44,19 @@
     <div class="workflow-steps">
       <div class="workflow-step">
         <div class="workflow-badge">🌐 Web</div>
-        <div class="workflow-desc">Browser — no install</div>
+        <div class="workflow-desc" data-i18n="auto.claude-deep-dive.002">Browser — no install</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-badge">💻 Desktop</div>
-        <div class="workflow-desc">Native app + MCP</div>
+        <div class="workflow-desc" data-i18n="auto.claude-deep-dive.003">Native app + MCP</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-badge">⌨️ Code</div>
-        <div class="workflow-desc">Terminal agent</div>
+        <div class="workflow-desc" data-i18n="auto.claude-deep-dive.004">Terminal agent</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-badge">🔀 Dispatch</div>
-        <div class="workflow-desc">Multi-tool automation</div>
+        <div class="workflow-desc" data-i18n="auto.claude-deep-dive.005">Multi-tool automation</div>
       </div>
     </div>
   </div>
@@ -69,10 +67,10 @@
   <div class="container">
     <div class="tabs" id="claude-tabs">
       <div class="tab-list" role="tablist">
-        <button class="tab-btn active" data-tab="web"      role="tab" data-i18n="claude.tab.web">Claude Web</button>
-        <button class="tab-btn"        data-tab="desktop"  role="tab" data-i18n="claude.tab.desktop">Desktop + MCP</button>
-        <button class="tab-btn"        data-tab="code"     role="tab" data-i18n="claude.tab.code">Claude Code</button>
-        <button class="tab-btn"        data-tab="dispatch" role="tab" data-i18n="claude.tab.dispatch">MCP Dispatch</button>
+        <button class="tab-btn active" data-tab="web" role="tab" data-i18n="claude.tab.web">Claude Web</button>
+        <button class="tab-btn" data-tab="desktop" role="tab" data-i18n="claude.tab.desktop">Desktop + MCP</button>
+        <button class="tab-btn" data-tab="code" role="tab" data-i18n="claude.tab.code">Claude Code</button>
+        <button class="tab-btn" data-tab="dispatch" role="tab" data-i18n="claude.tab.dispatch">MCP Dispatch</button>
       </div>
 
       <!-- ── Tab: Web ──────────────────────────────────────── -->
@@ -82,20 +80,20 @@
             <h2 data-i18n="claude.web.h">Claude Web — Start Here</h2>
             <p class="text-muted mt-2" data-i18n="claude.web.p">The fastest way to use Claude. No install. 200k context window. Free tier with generous daily limits.</p>
             <div class="flex gap-3 mt-4 flex-wrap">
-              <a href="https://claude.ai" target="_blank" class="btn btn-primary">Open Claude.ai →</a>
-              <a href="https://docs.anthropic.com" target="_blank" class="btn btn-secondary">Docs</a>
+              <a href="https://claude.ai" target="_blank" class="btn btn-primary" data-i18n="auto.claude-deep-dive.006">Open Claude.ai →</a>
+              <a href="https://docs.anthropic.com" target="_blank" class="btn btn-secondary" data-i18n="auto.claude-deep-dive.007">Docs</a>
             </div>
           </div>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Feature</th><th>Free</th><th>Pro $20/mo</th></tr></thead>
+              <thead><tr><th data-i18n="auto.claude-deep-dive.008">Feature</th><th data-i18n="auto.claude-deep-dive.009">Free</th><th data-i18n="auto.claude-deep-dive.010">Pro $20/mo</th></tr></thead>
               <tbody>
-                <tr><td>Claude Sonnet</td><td>~30/day</td><td>Unlimited</td></tr>
-                <tr><td>Claude Haiku</td><td>✅</td><td>✅</td></tr>
-                <tr><td>Context window</td><td>200k tokens</td><td>200k tokens</td></tr>
-                <tr><td>Projects</td><td>Limited</td><td>✅ Full</td></tr>
-                <tr><td>Artifacts</td><td>✅</td><td>✅</td></tr>
-                <tr><td>File uploads</td><td>✅</td><td>✅</td></tr>
+                <tr><td data-i18n="auto.claude-deep-dive.011">Claude Sonnet</td><td data-i18n="auto.claude-deep-dive.012">~30/day</td><td data-i18n="auto.claude-deep-dive.013">Unlimited</td></tr>
+                <tr><td data-i18n="auto.claude-deep-dive.014">Claude Haiku</td><td data-i18n="auto.claude-deep-dive.015">✅</td><td data-i18n="auto.claude-deep-dive.016">✅</td></tr>
+                <tr><td data-i18n="auto.claude-deep-dive.017">Context window</td><td data-i18n="auto.claude-deep-dive.018">200k tokens</td><td data-i18n="auto.claude-deep-dive.019">200k tokens</td></tr>
+                <tr><td data-i18n="auto.claude-deep-dive.020">Projects</td><td data-i18n="auto.claude-deep-dive.021">Limited</td><td data-i18n="auto.claude-deep-dive.022">✅ Full</td></tr>
+                <tr><td data-i18n="auto.claude-deep-dive.023">Artifacts</td><td data-i18n="auto.claude-deep-dive.024">✅</td><td data-i18n="auto.claude-deep-dive.025">✅</td></tr>
+                <tr><td data-i18n="auto.claude-deep-dive.026">File uploads</td><td data-i18n="auto.claude-deep-dive.027">✅</td><td data-i18n="auto.claude-deep-dive.028">✅</td></tr>
               </tbody>
             </table>
           </div>
@@ -103,20 +101,20 @@
 
         <div class="grid grid-3 gap-4 mb-6">
           <div class="card">
-            <h3>🗂️ Projects</h3>
-            <p class="text-muted text-sm mt-2">Persistent AI workspaces with custom instructions. Add your tech stack, coding style, and project files once — Claude remembers across all conversations in the project.</p>
+            <h3 data-i18n="auto.claude-deep-dive.029">🗂️ Projects</h3>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.030">Persistent AI workspaces with custom instructions. Add your tech stack, coding style, and project files once — Claude remembers across all conversations in the project.</p>
           </div>
           <div class="card">
-            <h3>🎨 Artifacts</h3>
-            <p class="text-muted text-sm mt-2">Claude renders live code in a side panel — HTML pages, React components, SVG diagrams. Edit and iterate without copy-pasting. Try: "Build an interactive quiz in React."</p>
+            <h3 data-i18n="auto.claude-deep-dive.031">🎨 Artifacts</h3>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.032">Claude renders live code in a side panel — HTML pages, React components, SVG diagrams. Edit and iterate without copy-pasting. Try: "Build an interactive quiz in React."</p>
           </div>
           <div class="card">
-            <h3>🧠 Extended Thinking</h3>
-            <p class="text-muted text-sm mt-2">Claude shows its reasoning chain before answering. Use for hard algorithms, architecture decisions, and complex debugging where normal mode gives mediocre results.</p>
+            <h3 data-i18n="auto.claude-deep-dive.033">🧠 Extended Thinking</h3>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.034">Claude shows its reasoning chain before answering. Use for hard algorithms, architecture decisions, and complex debugging where normal mode gives mediocre results.</p>
           </div>
         </div>
 
-        <h3 class="mb-4">5 Starter Prompts for Students</h3>
+        <h3 class="mb-4" data-i18n="auto.claude-deep-dive.035">5 Starter Prompts for Students</h3>
         <div style="display:flex; flex-direction:column; gap:.75rem;">
           <div class="card">
             <strong>Code Review</strong>
@@ -162,15 +160,15 @@ Use a real-world analogy, then show code.</code></pre>
 
         <div class="grid grid-2 gap-6 mb-6">
           <div>
-            <h3>Install Claude Desktop</h3>
-            <div class="callout callout-info mt-3">
+            <h3 data-i18n="auto.claude-deep-dive.036">Install Claude Desktop</h3>
+            <div class="callout callout-info mt-3" data-i18n-html="auto.claude-deep-dive.037">
               <div class="callout-icon">🔗</div>
               <div>
                 <div class="callout-title">Download</div>
                 <p class="callout-body"><a href="https://claude.ai/download" target="_blank">claude.ai/download</a> — Windows &amp; Mac</p>
               </div>
             </div>
-            <p class="text-muted text-sm mt-3">After installing, sign in with your Anthropic account. The MCP configuration file is at:</p>
+            <p class="text-muted text-sm mt-3" data-i18n="auto.claude-deep-dive.038">After installing, sign in with your Anthropic account. The MCP configuration file is at:</p>
             <pre><code># Mac
 ~/Library/Application Support/Claude/claude_desktop_config.json
 
@@ -178,37 +176,37 @@ Use a real-world analogy, then show code.</code></pre>
 %APPDATA%\Claude\claude_desktop_config.json</code></pre>
           </div>
           <div>
-            <h3>What is MCP?</h3>
-            <p class="text-muted text-sm mt-2">Model Context Protocol is an open standard that lets Claude connect to external tools. Think of it as a universal adapter that gives Claude real access to your computer.</p>
+            <h3 data-i18n="auto.claude-deep-dive.039">What is MCP?</h3>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.040">Model Context Protocol is an open standard that lets Claude connect to external tools. Think of it as a universal adapter that gives Claude real access to your computer.</p>
             <div class="security-flow mt-3" style="max-width:100%;">
               <div class="flow-step step-info" style="padding:.75rem 1rem;">
                 <div class="flow-step-icon">🗂️</div>
                 <div class="flow-step-content">
-                  <h4>Filesystem MCP</h4>
-                  <p>Read/write local files directly</p>
+                  <h4 data-i18n="auto.claude-deep-dive.041">Filesystem MCP</h4>
+                  <p data-i18n="auto.claude-deep-dive.042">Read/write local files directly</p>
                 </div>
               </div>
               <div class="flow-connector">↓</div>
               <div class="flow-step step-info" style="padding:.75rem 1rem;">
                 <div class="flow-step-icon">🐙</div>
                 <div class="flow-step-content">
-                  <h4>GitHub MCP</h4>
-                  <p>Issues, PRs, commits via API</p>
+                  <h4 data-i18n="auto.claude-deep-dive.043">GitHub MCP</h4>
+                  <p data-i18n="auto.claude-deep-dive.044">Issues, PRs, commits via API</p>
                 </div>
               </div>
               <div class="flow-connector">↓</div>
               <div class="flow-step step-info" style="padding:.75rem 1rem;">
                 <div class="flow-step-icon">🌐</div>
                 <div class="flow-step-content">
-                  <h4>Browser MCP</h4>
-                  <p>Navigate, screenshot, extract</p>
+                  <h4 data-i18n="auto.claude-deep-dive.045">Browser MCP</h4>
+                  <p data-i18n="auto.claude-deep-dive.046">Navigate, screenshot, extract</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <h3 class="mb-3">Connect the Filesystem MCP</h3>
+        <h3 class="mb-3" data-i18n="auto.claude-deep-dive.047">Connect the Filesystem MCP</h3>
         <pre data-lang="bash"><code>npm install -g @modelcontextprotocol/server-filesystem</code></pre>
         <pre data-lang="json"><code>// claude_desktop_config.json
 {
@@ -224,45 +222,45 @@ Use a real-world analogy, then show code.</code></pre>
   }
 }</code></pre>
 
-        <h3 class="mb-3 mt-6">5-Step Demo: Filesystem MCP</h3>
+        <h3 class="mb-3 mt-6" data-i18n="auto.claude-deep-dive.048">5-Step Demo: Filesystem MCP</h3>
         <div class="security-flow" style="max-width:100%;">
           <div class="flow-step">
             <div class="flow-step-icon">1</div>
             <div class="flow-step-content">
-              <h4>Explore</h4>
-              <p>"List all files in my project and summarize what this app does based on the structure."</p>
+              <h4 data-i18n="auto.claude-deep-dive.049">Explore</h4>
+              <p data-i18n="auto.claude-deep-dive.050">"List all files in my project and summarize what this app does based on the structure."</p>
             </div>
           </div>
           <div class="flow-connector">↓</div>
           <div class="flow-step">
             <div class="flow-step-icon">2</div>
             <div class="flow-step-content">
-              <h4>Read</h4>
-              <p>"Read main.py and identify functions longer than 30 lines."</p>
+              <h4 data-i18n="auto.claude-deep-dive.051">Read</h4>
+              <p data-i18n="auto.claude-deep-dive.052">"Read main.py and identify functions longer than 30 lines."</p>
             </div>
           </div>
           <div class="flow-connector">↓</div>
           <div class="flow-step">
             <div class="flow-step-icon">3</div>
             <div class="flow-step-content">
-              <h4>Audit</h4>
-              <p>"Search all Python files for hardcoded passwords or API keys."</p>
+              <h4 data-i18n="auto.claude-deep-dive.053">Audit</h4>
+              <p data-i18n="auto.claude-deep-dive.054">"Search all Python files for hardcoded passwords or API keys."</p>
             </div>
           </div>
           <div class="flow-connector">↓</div>
           <div class="flow-step step-warning">
             <div class="flow-step-icon">4</div>
             <div class="flow-step-content">
-              <h4>Fix</h4>
-              <p>"In config.py, move the hardcoded DB password to an environment variable called DB_PASSWORD."</p>
+              <h4 data-i18n="auto.claude-deep-dive.055">Fix</h4>
+              <p data-i18n="auto.claude-deep-dive.056">"In config.py, move the hardcoded DB password to an environment variable called DB_PASSWORD."</p>
             </div>
           </div>
           <div class="flow-connector">↓</div>
           <div class="flow-step step-success">
             <div class="flow-step-icon">5</div>
             <div class="flow-step-content">
-              <h4>Document</h4>
-              <p>"Generate a complete DEVELOPER.md documenting project structure, setup, and API endpoints."</p>
+              <h4 data-i18n="auto.claude-deep-dive.057">Document</h4>
+              <p data-i18n="auto.claude-deep-dive.058">"Generate a complete DEVELOPER.md documenting project structure, setup, and API endpoints."</p>
             </div>
           </div>
         </div>
@@ -274,10 +272,10 @@ Use a real-world analogy, then show code.</code></pre>
         <p class="text-muted mt-2 mb-6" data-i18n="claude.code.p">An autonomous coding agent that lives in your terminal, reads your entire codebase, and makes changes directly.</p>
 
         <div class="callout callout-warning mb-6">
-          <div class="callout-icon">⚠️</div>
+          <div class="callout-icon" data-i18n="auto.claude-deep-dive.059">⚠️</div>
           <div>
             <div class="callout-title" data-i18n="claude.security.note">Always review every AI-generated change before committing to Git</div>
-            <p class="callout-body">Run <code>git diff</code> before every <code>git add</code>. You are responsible for the code in your repo.</p>
+            <p class="callout-body" data-i18n-html="auto.claude-deep-dive.060">Run <code>git diff</code> before every <code>git add</code>. You are responsible for the code in your repo.</p>
           </div>
         </div>
 
@@ -292,59 +290,59 @@ claude --version
 claude auth login
 
 # Run in any project
-cd ~/projects/my-app && claude</code></pre>
+cd ~/projects/my-app &amp;&amp; claude</code></pre>
 
         <h3 class="mt-6 mb-3" data-i18n="claude.cmd.ref">Slash Command Reference</h3>
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Command</th><th>What It Does</th><th>Example Usage</th></tr>
+              <tr><th data-i18n="auto.claude-deep-dive.061">Command</th><th data-i18n="auto.claude-deep-dive.062">What It Does</th><th data-i18n="auto.claude-deep-dive.063">Example Usage</th></tr>
             </thead>
             <tbody>
-              <tr><td><code>/init</code></td><td>Analyse project, create CLAUDE.md context file</td><td>Run first in every new project</td></tr>
-              <tr><td><code>/help</code></td><td>Show all available slash commands</td><td>When you forget a command</td></tr>
-              <tr><td><code>/status</code></td><td>Show context size and loaded files</td><td>Check before long sessions</td></tr>
-              <tr><td><code>/review</code></td><td>Review recent changes or full project</td><td><code>/review "focus on security"</code></td></tr>
-              <tr><td><code>/compact</code></td><td>Compress conversation to free context space</td><td>On long sessions &gt;1hr</td></tr>
-              <tr><td><code>/clear</code></td><td>Clear session and start fresh</td><td>Switching to a new task</td></tr>
-              <tr><td><code>/add &lt;file&gt;</code></td><td>Add a specific file to context</td><td><code>/add src/auth.py</code></td></tr>
-              <tr><td><code>/diff</code></td><td>Show all changes made this session</td><td>Before committing</td></tr>
-              <tr><td><code>/undo</code></td><td>Undo the last file change</td><td>When a change was wrong</td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.064"><code>/init</code></td><td data-i18n="auto.claude-deep-dive.065">Analyse project, create CLAUDE.md context file</td><td data-i18n="auto.claude-deep-dive.066">Run first in every new project</td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.067"><code>/help</code></td><td data-i18n="auto.claude-deep-dive.068">Show all available slash commands</td><td data-i18n="auto.claude-deep-dive.069">When you forget a command</td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.070"><code>/status</code></td><td data-i18n="auto.claude-deep-dive.071">Show context size and loaded files</td><td data-i18n="auto.claude-deep-dive.072">Check before long sessions</td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.073"><code>/review</code></td><td data-i18n="auto.claude-deep-dive.074">Review recent changes or full project</td><td data-i18n-html="auto.claude-deep-dive.075"><code>/review "focus on security"</code></td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.076"><code>/compact</code></td><td data-i18n="auto.claude-deep-dive.077">Compress conversation to free context space</td><td data-i18n="auto.claude-deep-dive.078">On long sessions &gt;1hr</td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.079"><code>/clear</code></td><td data-i18n="auto.claude-deep-dive.080">Clear session and start fresh</td><td data-i18n="auto.claude-deep-dive.081">Switching to a new task</td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.082"><code>/add &lt;file&gt;</code></td><td data-i18n="auto.claude-deep-dive.083">Add a specific file to context</td><td data-i18n-html="auto.claude-deep-dive.084"><code>/add src/auth.py</code></td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.085"><code>/diff</code></td><td data-i18n="auto.claude-deep-dive.086">Show all changes made this session</td><td data-i18n="auto.claude-deep-dive.087">Before committing</td></tr>
+              <tr><td data-i18n-html="auto.claude-deep-dive.088"><code>/undo</code></td><td data-i18n="auto.claude-deep-dive.089">Undo the last file change</td><td data-i18n="auto.claude-deep-dive.090">When a change was wrong</td></tr>
             </tbody>
           </table>
         </div>
 
-        <h3 class="mt-6 mb-3">10-Step Demo Session</h3>
-        <pre data-lang="bash"><code>mkdir demo-todo && cd demo-todo
+        <h3 class="mt-6 mb-3" data-i18n="auto.claude-deep-dive.091">10-Step Demo Session</h3>
+        <pre data-lang="bash"><code>mkdir demo-todo &amp;&amp; cd demo-todo
 git init
-echo '{"name":"demo"}' > package.json
+echo '{"name":"demo"}' &gt; package.json
 npm install express --save
 claude</code></pre>
         <div class="security-flow mt-3" style="max-width:100%;">
-          <div class="flow-step"><div class="flow-step-icon">1</div><div class="flow-step-content"><p><code>/init</code> — Claude explores your project</p></div></div>
+          <div class="flow-step"><div class="flow-step-icon">1</div><div class="flow-step-content"><p data-i18n-html="auto.claude-deep-dive.092"><code>/init</code> — Claude explores your project</p></div></div>
           <div class="flow-connector">↓</div>
-          <div class="flow-step"><div class="flow-step-icon">2</div><div class="flow-step-content"><p>"Create a simple Express REST API for a to-do list with in-memory storage."</p></div></div>
+          <div class="flow-step"><div class="flow-step-icon">2</div><div class="flow-step-content"><p data-i18n="auto.claude-deep-dive.093">"Create a simple Express REST API for a to-do list with in-memory storage."</p></div></div>
           <div class="flow-connector">↓</div>
-          <div class="flow-step"><div class="flow-step-icon">3</div><div class="flow-step-content"><p><code>/review "check API design"</code></p></div></div>
+          <div class="flow-step"><div class="flow-step-icon">3</div><div class="flow-step-content"><p data-i18n-html="auto.claude-deep-dive.094"><code>/review "check API design"</code></p></div></div>
           <div class="flow-connector">↓</div>
-          <div class="flow-step"><div class="flow-step-icon">4</div><div class="flow-step-content"><p>"Add input validation — todos need a non-empty title."</p></div></div>
+          <div class="flow-step"><div class="flow-step-icon">4</div><div class="flow-step-content"><p data-i18n="auto.claude-deep-dive.095">"Add input validation — todos need a non-empty title."</p></div></div>
           <div class="flow-connector">↓</div>
-          <div class="flow-step step-warning"><div class="flow-step-icon">5</div><div class="flow-step-content"><p><code>git diff</code> — review every change before committing</p></div></div>
+          <div class="flow-step step-warning"><div class="flow-step-icon">5</div><div class="flow-step-content"><p data-i18n-html="auto.claude-deep-dive.096"><code>git diff</code> — review every change before committing</p></div></div>
           <div class="flow-connector">↓</div>
-          <div class="flow-step step-success"><div class="flow-step-icon">6</div><div class="flow-step-content"><p>"Write Jest tests for all endpoints." → <code>/compact</code> → "Create README.md"</p></div></div>
+          <div class="flow-step step-success"><div class="flow-step-icon">6</div><div class="flow-step-content"><p data-i18n-html="auto.claude-deep-dive.097">"Write Jest tests for all endpoints." → <code>/compact</code> → "Create README.md"</p></div></div>
         </div>
 
-        <h3 class="mt-6 mb-3">Claude Code vs Cursor vs Copilot</h3>
+        <h3 class="mt-6 mb-3" data-i18n="auto.claude-deep-dive.098">Claude Code vs Cursor vs Copilot</h3>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Feature</th><th>Claude Code</th><th>Cursor</th><th>GitHub Copilot</th></tr></thead>
+            <thead><tr><th data-i18n="auto.claude-deep-dive.099">Feature</th><th data-i18n="auto.claude-deep-dive.100">Claude Code</th><th data-i18n="auto.claude-deep-dive.101">Cursor</th><th data-i18n="auto.claude-deep-dive.102">GitHub Copilot</th></tr></thead>
             <tbody>
-              <tr><td>Interface</td><td>Terminal</td><td>IDE</td><td>VS Code Extension</td></tr>
-              <tr><td>Full codebase context</td><td>✅</td><td>✅</td><td>⚠️ Open files</td></tr>
-              <tr><td>Runs terminal commands</td><td>✅</td><td>⚠️ Agent mode</td><td>❌</td></tr>
-              <tr><td>Inline completions</td><td>❌</td><td>✅</td><td>✅</td></tr>
-              <tr><td>Free tier</td><td>API credits</td><td>2000/month</td><td>Free for students</td></tr>
-              <tr><td>Best for</td><td>Complex automation</td><td>Daily coding</td><td>Real-time completions</td></tr>
+              <tr><td data-i18n="auto.claude-deep-dive.103">Interface</td><td data-i18n="auto.claude-deep-dive.104">Terminal</td><td data-i18n="auto.claude-deep-dive.105">IDE</td><td data-i18n="auto.claude-deep-dive.106">VS Code Extension</td></tr>
+              <tr><td data-i18n="auto.claude-deep-dive.107">Full codebase context</td><td data-i18n="auto.claude-deep-dive.108">✅</td><td data-i18n="auto.claude-deep-dive.109">✅</td><td data-i18n="auto.claude-deep-dive.110">⚠️ Open files</td></tr>
+              <tr><td data-i18n="auto.claude-deep-dive.111">Runs terminal commands</td><td data-i18n="auto.claude-deep-dive.112">✅</td><td data-i18n="auto.claude-deep-dive.113">⚠️ Agent mode</td><td data-i18n="auto.claude-deep-dive.114">❌</td></tr>
+              <tr><td data-i18n="auto.claude-deep-dive.115">Inline completions</td><td data-i18n="auto.claude-deep-dive.116">❌</td><td data-i18n="auto.claude-deep-dive.117">✅</td><td data-i18n="auto.claude-deep-dive.118">✅</td></tr>
+              <tr><td data-i18n="auto.claude-deep-dive.119">Free tier</td><td data-i18n="auto.claude-deep-dive.120">API credits</td><td data-i18n="auto.claude-deep-dive.121">2000/month</td><td data-i18n="auto.claude-deep-dive.122">Free for students</td></tr>
+              <tr><td data-i18n="auto.claude-deep-dive.123">Best for</td><td data-i18n="auto.claude-deep-dive.124">Complex automation</td><td data-i18n="auto.claude-deep-dive.125">Daily coding</td><td data-i18n="auto.claude-deep-dive.126">Real-time completions</td></tr>
             </tbody>
           </table>
         </div>
@@ -355,7 +353,7 @@ claude</code></pre>
         <h2 data-i18n="claude.dispatch.h">MCP Dispatch — Full Automation</h2>
         <p class="text-muted mt-2 mb-6" data-i18n="claude.dispatch.p">Route tasks across multiple MCP servers — filesystem, GitHub, browser — in a single natural language instruction.</p>
 
-        <div class="callout callout-info mb-6">
+        <div class="callout callout-info mb-6" data-i18n-html="auto.claude-deep-dive.127">
           <div class="callout-icon">💡</div>
           <div>
             <div class="callout-title">What "Dispatch" Means</div>
@@ -363,31 +361,31 @@ claude</code></pre>
           </div>
         </div>
 
-        <h3 class="mb-3">Available MCP Servers</h3>
+        <h3 class="mb-3" data-i18n="auto.claude-deep-dive.128">Available MCP Servers</h3>
         <div class="grid grid-2 gap-4 mb-6">
           <div class="card">
-            <h4>🗂️ Filesystem</h4>
+            <h4 data-i18n="auto.claude-deep-dive.129">🗂️ Filesystem</h4>
             <pre><code>npm install -g @modelcontextprotocol/server-filesystem</code></pre>
-            <p class="text-muted text-sm mt-2">Read/write files, list directories, move/copy files</p>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.130">Read/write files, list directories, move/copy files</p>
           </div>
           <div class="card">
-            <h4>🐙 GitHub</h4>
+            <h4 data-i18n="auto.claude-deep-dive.131">🐙 GitHub</h4>
             <pre><code>npm install -g @modelcontextprotocol/server-github</code></pre>
-            <p class="text-muted text-sm mt-2">Repos, issues, PRs, commits — requires PAT token</p>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.132">Repos, issues, PRs, commits — requires PAT token</p>
           </div>
           <div class="card">
-            <h4>🌐 Browser / Puppeteer</h4>
+            <h4 data-i18n="auto.claude-deep-dive.133">🌐 Browser / Puppeteer</h4>
             <pre><code>npm install -g @modelcontextprotocol/server-puppeteer</code></pre>
-            <p class="text-muted text-sm mt-2">Navigate URLs, screenshot, extract content</p>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.134">Navigate URLs, screenshot, extract content</p>
           </div>
           <div class="card">
-            <h4>💬 Slack</h4>
+            <h4 data-i18n="auto.claude-deep-dive.135">💬 Slack</h4>
             <pre><code>npm install -g @modelcontextprotocol/server-slack</code></pre>
-            <p class="text-muted text-sm mt-2">Read/send messages, list channels — requires bot token</p>
+            <p class="text-muted text-sm mt-2" data-i18n="auto.claude-deep-dive.136">Read/send messages, list channels — requires bot token</p>
           </div>
         </div>
 
-        <h3 class="mb-3">Example Dispatch Workflow</h3>
+        <h3 class="mb-3" data-i18n="auto.claude-deep-dive.137">Example Dispatch Workflow</h3>
         <div class="card mb-4">
           <strong>Single Prompt — Multi-Server Execution</strong>
           <pre class="mt-3"><code>"Check my GitHub notifications for new PR reviews.
@@ -401,8 +399,8 @@ Write a daily standup summary and save it to
           </div>
         </div>
 
-        <h3 class="mb-3">Security Rules for MCP</h3>
-        <div class="callout callout-danger">
+        <h3 class="mb-3" data-i18n="auto.claude-deep-dive.138">Security Rules for MCP</h3>
+        <div class="callout callout-danger" data-i18n-html="auto.claude-deep-dive.139">
           <div class="callout-icon">🔐</div>
           <div>
             <div class="callout-title">Least Privilege Always</div>
@@ -415,13 +413,13 @@ Write a daily standup summary and save it to
           </div>
         </div>
 
-        <h3 class="mt-6 mb-3">Student Exercise: Two-Server Dispatch</h3>
+        <h3 class="mt-6 mb-3" data-i18n="auto.claude-deep-dive.140">Student Exercise: Two-Server Dispatch</h3>
         <div class="card">
-          <p class="text-muted mb-3">Set up filesystem + GitHub MCP, then run this dispatch:</p>
+          <p class="text-muted mb-3" data-i18n="auto.claude-deep-dive.141">Set up filesystem + GitHub MCP, then run this dispatch:</p>
           <pre><code>"List all my GitHub repositories created in the last 6 months.
 For each repo that's cloned locally, check if it has a README.md.
 List the repos that are missing documentation."</code></pre>
-          <p class="text-muted text-sm mt-3">Learning goal: understand how Claude dispatches to multiple servers and integrates results.</p>
+          <p class="text-muted text-sm mt-3" data-i18n="auto.claude-deep-dive.142">Learning goal: understand how Claude dispatches to multiple servers and integrates results.</p>
         </div>
       </div>
 
@@ -441,7 +439,7 @@ List the repos that are missing documentation."</code></pre>
       <ul class="footer-links">
         <li><a href="index.html" data-i18n="footer.home">Home</a></li>
         <li><a href="tools.html" data-i18n="footer.tools">Tools</a></li>
-        <li><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code Docs</a></li>
+        <li data-i18n-html="auto.claude-deep-dive.143"><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code Docs</a></li>
       </ul>
       <div class="footer-copy" data-i18n="footer.copy">© 2025 Padang AI Coding Tools Class.</div>
     </div>
@@ -451,5 +449,6 @@ List the repos that are missing documentation."</code></pre>
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
-</body>
-</html>
+
+
+</body></html>
