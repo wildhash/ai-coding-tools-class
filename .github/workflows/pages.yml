@@ -36,14 +36,27 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Step 3: Upload the root directory as the Pages artifact
+      # Step 3: Assemble a clean site directory with only static assets
+      - name: Build site directory
+        run: |
+          mkdir -p _site
+          cp *.html _site/
+          cp *.css _site/
+          # Copy JS files except test files
+          for f in *.js; do
+            case "$f" in
+              *.test.js) ;;
+              *) cp "$f" _site/ ;;
+            esac
+          done
+
+      # Step 4: Upload the clean site directory as the Pages artifact
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload from root — all HTML/CSS/JS lives here
-          path: '.'
+          path: '_site'
 
-      # Step 4: Deploy the artifact to GitHub Pages
+      # Step 5: Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
